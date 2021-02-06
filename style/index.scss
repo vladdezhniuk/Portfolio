@@ -1,0 +1,248 @@
+
+$header_text: rgb(200, 200, 200);
+$main__text: rgb(70, 70, 70);
+$highlight_color: rgb(41, 123, 129);
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+  font-size: 30px;
+  body {
+    margin: 0;
+    overflow-x: hidden;
+    header {
+      height: 120vh;
+      background: linear-gradient(rgba( 0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/header__background.jpg);
+      background-attachment: fixed;
+      background-size: cover;
+      color: $header_text;
+      .hello__item {
+        width: 50vw;
+        position: relative;
+        left: 30px;
+        top: 20vh;
+        .hello {
+          font-size: 50px;
+        }
+      }
+      .nav {
+        height: 80px;
+        width: 100%;
+        padding: 0 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+          letter-spacing: 3px;
+          position: relative;
+          font-size: 30px;
+        }
+        .nav__menu {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          list-style: none;
+          .link__item {
+            margin:0 30px;
+
+            .link {
+              position: relative;
+              display: flex;
+              justify-content: center;
+              text-decoration: none;
+              color: $header_text;
+              font-size: 24px;
+              line-height: 40px;
+              font-weight: bold;
+              &::after {
+                content: '';
+                width: 0;
+                height: 3px;
+                position: absolute;
+                bottom: 0;
+                background: $highlight_color;
+                border-radius: 8px;
+                visibility: hidden;
+                transition: all 0.2s 0.1s linear;
+              }
+              &:hover::after {
+                visibility: visible;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+    main {
+      min-height: 100vh;
+      position: relative;
+      background: white;
+      color: $main__text;
+      &::before {
+        display: block;
+        position: relative;
+        width: 110vw;
+        top: -9vh;
+        left: -3vw;
+        content: "";
+        height: 20vh;
+        background: white;
+        transform: rotateZ(5deg);
+      }
+      .about__container {
+        position: relative;
+        bottom: 10vh;
+        padding: 2vh 3vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: center;
+          .about {
+          width: 40vw;
+          position: relative;
+          padding: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &::before {
+            content: '';
+            width: 20%;
+            height: 8px;
+            position: absolute;
+            top: 0;
+            background: $highlight_color;
+            border-radius: 10px;
+          }
+          &::after {
+            content: '';
+            width: 20%;
+            height: 8px;
+            position: absolute;
+            bottom: 0;
+            background:  $highlight_color;
+            border-radius: 10px;
+          }
+        }
+        .my__gif {
+          width: "35%";
+        }
+        .skills {
+          min-height: 60vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 0 auto;
+          .skills__container {
+            width: 85vw;
+            background-color: rgb(240, 240, 240);
+            border-radius: 10px;
+            .skills__menu {
+              width: 80vw;
+              position: relative;
+              top: 5vh;
+              display: flex;
+              justify-content: space-between;
+              padding: 20px 40px;
+              margin: 0 auto;
+              list-style: none;
+              background: $highlight_color;
+              border-radius: 10px;
+              box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5), 0 1px 30px  rgba(0, 0, 0, 0.4) ;
+              .skills__item {
+                .skill {
+                  color: white;
+                  transition: all 0.2s 0.1s linear;
+                  &:hover {
+                    color: black;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .projects__container {
+        background: rgb(240, 240, 240);
+        &::before {
+          display: block;
+          position: relative;
+          width: 110vw;
+          top: -9vh;
+          left: -3vw;
+          content: "";
+          height: 20vh;
+          transform: rotateZ(5deg);
+          background: rgb(240, 240, 240);
+        }
+        .projects__box {
+          min-height: 100vh;
+          display: flex;
+          position: relative;
+          bottom: 15vh;
+        justify-content: center;
+        .projects__title {
+          display: flex;
+          justify-content: center;
+          height: 50px;
+          position: relative;
+          &::after{
+            content: '';
+            width: 110%;
+            height: 4px;
+            position: absolute;
+            bottom: 0;
+            background: $highlight_color;
+            border-radius: 10px;
+          }
+          }
+        }
+      }
+    }
+    footer {
+      height: 30vh;
+      background: $highlight_color;
+      &::before {
+        display: block;
+        position: relative;
+        width: 110vw;
+        top: -9vh;
+        left: -3vw;
+        content: "";
+        height: 20vh;
+        transform: rotateZ(5deg);
+        background: $highlight_color;
+      }
+      .contact__container {
+        position: relative;
+        bottom: 15vh;
+        .contact__box {
+          height: 10vh;
+          .social__menu {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            .social__item {
+              .social {
+                color: white;
+                transition: all 0.2s 0.1s linear;
+                &:hover {
+                  color: black;
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
+
