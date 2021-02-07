@@ -20,12 +20,12 @@ html {
       background-attachment: fixed;
       background-size: cover;
       color: $header_text;
-      .hello__item {
+      .hello {
         width: 50vw;
         position: relative;
         left: 30px;
         top: 20vh;
-        .hello {
+        .hello__title {
           font-size: 50px;
         }
       }
@@ -70,7 +70,7 @@ html {
                 background: $highlight_color;
                 border-radius: 8px;
                 visibility: hidden;
-                transition: all 0.2s 0.1s linear;
+                transition: all 0.1s 0.1s linear;
               }
               &:hover::after {
                 visibility: visible;
@@ -90,14 +90,14 @@ html {
         display: block;
         position: relative;
         width: 110vw;
-        top: -9vh;
-        left: -3vw;
+        top: -65px;
+        left: -15px;
         content: "";
-        height: 20vh;
+        height: 150px;
         background: white;
         transform: rotateZ(5deg);
       }
-      .about__container {
+      .about {
         position: relative;
         bottom: 10vh;
         padding: 2vh 3vw;
@@ -105,7 +105,7 @@ html {
         flex-wrap: wrap;
         justify-content: space-between;
         text-align: center;
-          .about {
+          .about__item {
           width: 40vw;
           position: relative;
           padding: 20px;
@@ -159,7 +159,7 @@ html {
               .skills__item {
                 .skill {
                   color: white;
-                  transition: all 0.2s 0.1s linear;
+                  transition: all 0.1s 0.1s linear;
                   &:hover {
                     color: black;
                   }
@@ -169,20 +169,20 @@ html {
           }
         }
       }
-      .projects__container {
+      .projects {
         background: rgb(240, 240, 240);
         &::before {
-          display: block;
-          position: relative;
-          width: 110vw;
-          top: -9vh;
-          left: -3vw;
-          content: "";
-          height: 20vh;
-          transform: rotateZ(5deg);
-          background: rgb(240, 240, 240);
-        }
-        .projects__box {
+        display: block;
+        position: relative;
+        width: 110vw;
+        top: -65px;
+        left: -15px;
+        content: "";
+        height: 150px;
+        background: rgb(240, 240, 240);
+        transform: rotateZ(5deg);
+      }
+        .projects__container {
           min-height: 100vh;
           display: flex;
           position: relative;
@@ -213,12 +213,12 @@ html {
         display: block;
         position: relative;
         width: 110vw;
-        top: -9vh;
-        left: -3vw;
+        top: -65px;
+        left: -15px;
         content: "";
-        height: 20vh;
+        height: 150px;
+        background:$highlight_color;
         transform: rotateZ(5deg);
-        background: $highlight_color;
       }
       .contact__container {
         position: relative;
@@ -229,10 +229,12 @@ html {
             list-style: none;
             display: flex;
             justify-content: space-around;
+            width: 40vw;
+            margin: 0 auto;
             .social__item {
               .social {
                 color: white;
-                transition: all 0.2s 0.1s linear;
+                transition: all 0.1s 0.1s linear;
                 &:hover {
                   color: black;
                 }
