@@ -11,8 +11,8 @@ html {
 
 html body {
   margin: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../img/pawel-czerwinski-BPrk2cOoCq8-unsplash.jpg);
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/pawel-czerwinski-BPrk2cOoCq8-unsplash.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../img/pawel-czerwinski-LlXzILHulTM-unsplash.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/pawel-czerwinski-LlXzILHulTM-unsplash.jpg);
   background-size: contain;
 }
 
