@@ -11,15 +11,15 @@ html {
 
 html body {
   margin: 0;
-  overflow-x: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/tina-dawson-Kim9COAIEGc-unsplash.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/tina-dawson-Kim9COAIEGc-unsplash.jpg);
+  background-size: contain;
 }
 
 html body header {
-  height: 120vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../img/header__background.jpg);
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/header__background.jpg);
+  height: 100vh;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: contain;
   color: #c8c8c8;
 }
 
@@ -109,18 +109,13 @@ html body header .nav .nav__menu .link__item .link:hover::after {
 }
 
 html body main {
-  min-height: 100vh;
+  -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 10%, 100% 95.5%);
+          clip-path: polygon(0% 100%, 0% 0%, 100% 10%, 100% 95.5%);
   position: relative;
+  top: 12vh;
+  padding-top: 20vh;
   background: white;
   color: #464646;
-}
-
-html body main::before {
-  content: "";
-  border: 145px solid transparent;
-  border-right: 0px solid white;
-  border-bottom: 0 solid white;
-  border-left: 1550px solid white;
 }
 
 html body main .about {
@@ -228,14 +223,9 @@ html body main .about .skills .skills__container .skills__menu .skills__item .sk
 html body main .projects {
   background: #f0f0f0;
   position: relative;
-}
-
-html body main .projects::before {
-  content: "";
-  border: 145px solid transparent;
-  border-right: 0px solid #f0f0f0;
-  border-bottom: 0 solid #f0f0f0;
-  border-left: 1550px solid #f0f0f0;
+  -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 20%, 100% 100%);
+          clip-path: polygon(0% 100%, 0% 0%, 100% 20%, 100% 100%);
+  padding-top: 20vh;
 }
 
 html body main .projects .projects__container {
@@ -270,17 +260,12 @@ html body main .projects .projects__container .projects__title::after {
 }
 
 html body footer {
-  height: 30vh;
-  background: #297b81;
-  position: relative;
-}
-
-html body footer::before {
-  content: "";
-  border: 145px solid transparent;
-  border-right: 0px solid #297b81;
-  border-bottom: 0px solid #297b81;
-  border-left: 1550px solid #297b81;
+  height: 50vh;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, transparent), to(rgba(22, 88, 94, 0.8)));
+  background: linear-gradient(transparent 30%, rgba(22, 88, 94, 0.8));
+  padding-top: 20vh;
+  -webkit-clip-path: polygon(0% 100%, 0% 25%, 100% 0%, 100% 100%);
+          clip-path: polygon(0% 100%, 0% 25%, 100% 0%, 100% 100%);
 }
 
 html body footer .contact__container .social__menu {
