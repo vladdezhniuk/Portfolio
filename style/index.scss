@@ -14,7 +14,8 @@ html {
   body {
     margin: 0;
     background: linear-gradient(rgba(0,0,0, 0.7),rgba(0,0,0, 0.7)), url(../img/background.jpg);
-    background-size: contain;
+    background-attachment: fixed;
+    background-size: 100%;
     header {
       height: 100vh;
       background-attachment: fixed;

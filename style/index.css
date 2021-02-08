@@ -13,7 +13,8 @@ html body {
   margin: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../img/background.jpg);
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/background.jpg);
-  background-size: contain;
+  background-attachment: fixed;
+  background-size: 100%;
 }
 
 html body header {
@@ -110,7 +111,7 @@ html body header .nav .nav__menu .link__item .link:hover::after {
 
 html body main {
   -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 10%, 100% 95.5%);
-          clip-path: polygon(0% 100%, 0% 0%, 100% 10%, 100% 95.5%);
+  clip-path: polygon(0% 100%, 0% 0%, 100% 10%, 100% 95.5%);
   position: relative;
   top: 12vh;
   padding-top: 20vh;
@@ -224,7 +225,7 @@ html body main .projects {
   min-height: 150vh;
   position: relative;
   -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 20%, 100% 100%);
-          clip-path: polygon(0% 100%, 0% 0%, 100% 20%, 100% 100%);
+  clip-path: polygon(0% 100%, 0% 0%, 100% 20%, 100% 100%);
   padding-top: 30vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -264,7 +265,7 @@ html body footer {
   background: linear-gradient(transparent 30%, black);
   padding-top: 20vh;
   -webkit-clip-path: polygon(0% 100%, 0% 25%, 100% 0%, 100% 100%);
-          clip-path: polygon(0% 100%, 0% 25%, 100% 0%, 100% 100%);
+  clip-path: polygon(0% 100%, 0% 25%, 100% 0%, 100% 100%);
 }
 
 html body footer .contact__container .social__menu {
