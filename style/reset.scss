@@ -3,9 +3,9 @@
 }
 
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: $font-family;
   scroll-behavior: smooth;
-  font-size: 30px;
+  font-size: $main_font-size;
 }
 
 body {
