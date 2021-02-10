@@ -1,6 +1,5 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -9,90 +8,66 @@ html {
   font-size: 30px;
 }
 
-html body {
+body {
   margin: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../img/background.jpg);
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/background.jpg);
   background-attachment: fixed;
   background-size: 100%;
 }
 
-html body header {
+header {
   height: 100vh;
   background-attachment: fixed;
   background-size: contain;
   color: #c8c8c8;
 }
-
-html body header .hello {
+header .hello {
   width: 50vw;
   position: relative;
   left: 30px;
   top: 20vh;
 }
-
-html body header .hello .hello__title {
+header .hello .hello__title {
   font-size: 50px;
 }
 
-html body header .nav {
+.nav {
   height: 80px;
   width: 100%;
   padding: 0 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
-html body header .nav .logo {
+.nav .logo {
   letter-spacing: 3px;
   position: relative;
   font-size: 30px;
 }
-
-html body header .nav .nav__menu {
+.nav .nav__menu {
   height: 100%;
   margin: 0;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-end;
+  align-items: center;
   list-style: none;
 }
-
-html body header .nav .nav__menu .link__item {
+.nav .nav__menu .link__item {
   margin: 0 30px;
 }
-
-html body header .nav .nav__menu .link__item .link {
+.nav .nav__menu .link__item .link {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   text-decoration: none;
   color: #c8c8c8;
   font-size: 24px;
   line-height: 40px;
   font-weight: bold;
 }
-
-html body header .nav .nav__menu .link__item .link::after {
-  content: '';
+.nav .nav__menu .link__item .link::after {
+  content: "";
   width: 0;
   height: 3px;
   position: absolute;
@@ -100,16 +75,14 @@ html body header .nav .nav__menu .link__item .link::after {
   background: #344b4d;
   border-radius: 8px;
   visibility: hidden;
-  -webkit-transition: all 0.1s 0.1s linear;
   transition: all 0.1s 0.1s linear;
 }
-
-html body header .nav .nav__menu .link__item .link:hover::after {
+.nav .nav__menu .link__item .link:hover::after {
   visibility: visible;
   width: 100%;
 }
 
-html body main {
+main {
   -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 10%, 100% 95.5%);
   clip-path: polygon(0% 100%, 0% 0%, 100% 10%, 100% 95.5%);
   position: relative;
@@ -118,38 +91,24 @@ html body main {
   background: white;
   color: #464646;
 }
-
-html body main .about {
+main .about {
   position: relative;
   padding: 2vh 3vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
   text-align: center;
 }
-
-html body main .about .about__item {
+main .about .about__item {
   width: 40vw;
   position: relative;
   padding: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
-html body main .about .about__item::before {
-  content: '';
+main .about .about__item::before {
+  content: "";
   width: 20%;
   height: 8px;
   position: absolute;
@@ -157,9 +116,8 @@ html body main .about .about__item::before {
   background: #344b4d;
   border-radius: 10px;
 }
-
-html body main .about .about__item::after {
-  content: '';
+main .about .about__item::after {
+  content: "";
   width: 20%;
   height: 8px;
   position: absolute;
@@ -167,89 +125,60 @@ html body main .about .about__item::after {
   background: #344b4d;
   border-radius: 10px;
 }
-
-html body main .about .my__gif {
+main .about .my__gif {
   width: "35%";
 }
-
-html body main .about .skills {
+main .about .skills {
   min-height: 60vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   margin: 0 auto;
 }
-
-html body main .about .skills .skills__container {
+main .about .skills .skills__container {
   width: 85vw;
   background-color: #f0f0f0;
   border-radius: 10px;
 }
-
-html body main .about .skills .skills__container .skills__menu {
+main .about .skills .skills__container .skills__menu {
   width: 80vw;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 20px 40px;
   margin: 0 auto;
   list-style: none;
   background: #344b4d;
   border-radius: 10px;
-  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5), 0 1px 30px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5), 0 1px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5), 0 1px 30px rgba(0, 0, 0, 0.4);
 }
-
-html body main .about .skills .skills__container .skills__menu .skills__item .skill {
+main .about .skills .skills__container .skills__menu .skills__item .skill {
   color: white;
-  -webkit-transition: all 0.1s 0.1s linear;
   transition: all 0.1s 0.1s linear;
 }
-
-html body main .about .skills .skills__container .skills__menu .skills__item .skill:hover {
+main .about .skills .skills__container .skills__menu .skills__item .skill:hover {
   color: #2c2c2c;
 }
-
-html body main .projects {
+main .projects {
   min-height: 150vh;
   position: relative;
   -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 20%, 100% 100%);
   clip-path: polygon(0% 100%, 0% 0%, 100% 20%, 100% 100%);
   padding-top: 30vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   background: #c8c8c8;
-  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5), 0 1px 30px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5), 0 1px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5), 0 1px 30px rgba(0, 0, 0, 0.4);
 }
-
-html body main .projects .projects__title {
+main .projects .projects__title {
   display: inline-block;
   position: relative;
   margin: 0 auto;
   height: 60px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
-html body main .projects .projects__title::after {
-  content: '';
+main .projects .projects__title::after {
+  content: "";
   width: 100%;
   height: 4px;
   position: absolute;
@@ -259,34 +188,26 @@ html body main .projects .projects__title::after {
   border-radius: 10px;
 }
 
-html body footer {
+footer {
   height: 50vh;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, transparent), to(black));
   background: linear-gradient(transparent 30%, black);
   padding-top: 20vh;
   -webkit-clip-path: polygon(0% 100%, 0% 25%, 100% 0%, 100% 100%);
   clip-path: polygon(0% 100%, 0% 25%, 100% 0%, 100% 100%);
 }
-
-html body footer .contact__container .social__menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
+footer .contact .contact__menu {
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   list-style: none;
   width: 40vw;
   margin: 0 auto;
 }
-
-html body footer .contact__container .social__menu .social__item .social {
+footer .contact .contact__menu .contact__item .social {
   color: white;
-  -webkit-transition: all 0.1s 0.1s linear;
   transition: all 0.1s 0.1s linear;
 }
-
-html body footer .contact__container .social__menu .social__item .social:hover {
+footer .contact .contact__menu .contact__item .social:hover {
   color: #344b4d;
 }
+
 /*# sourceMappingURL=index.css.map */

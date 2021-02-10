@@ -1,0 +1,15 @@
+header {
+  height: 100vh;
+  background-attachment: fixed;
+  background-size: contain;
+  color: $header_text;
+  .hello {
+    width: 50vw;
+    position: relative;
+    left: 30px;
+    top: 20vh;
+    .hello__title {
+      font-size: 50px;
+    }
+  }
+}
