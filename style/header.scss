@@ -13,3 +13,14 @@ header {
     }
   }
 }
+
+@media (max-width: 800px) {
+  header{
+    height: 80vh;
+  .hello{
+    width: 80vw;
+    left: 5vw;
+    top: 10vh;
+    }
+  }
+}

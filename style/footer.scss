@@ -6,11 +6,12 @@ footer {
   clip-path: polygon(0% 100%, 0% 25%, 100% 0%, 100% 100%);
   .contact {
     .contact__menu {
+      max-width: 500px;
       display: flex;
       justify-content: space-between;
       list-style: none;
-      width: 40vw;
       margin: 0 auto;
+      padding: 0 30px;
       .contact__item {
         .social {
           color: white;
@@ -19,6 +20,18 @@ footer {
             color: $highlight_color;
           }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  footer {
+    padding-top: 12vh;
+    height: 25vh;
+    .contact {
+    .contact__menu {
+      padding: 0 5vw;
       }
     }
   }
