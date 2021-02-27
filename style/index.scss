@@ -1,13 +1,26 @@
 @import "variables";
 @import "reset";
-@import "header";
-@import "nav";
+@import "extends";
+@import "header/header";
+@import "header/header__head";
+@import "header/header__greeting";
+@import "header/nav";
 @import "main";
-@import "footer";
-@import "projects";
-@import "about";
-@import "skills";
+@import "about/about";
+@import "about/about__text";
+@import "skills/skills";
+@import "skills/skills__container";
+@import "projects/projects";
+@import "projects/projects__container";
+@import "footer/footer";
+@import "footer/footer__contact";
 
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
 
-
-
+body {
+  background:  linear-gradient(rgba(0, 0, 0, 0.4), rgba(0,0,0, 0.4)), url(../img/background.jpg) top fixed;
+  background-size: cover;
+}

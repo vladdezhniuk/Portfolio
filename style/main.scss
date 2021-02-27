@@ -1,20 +1,7 @@
-main {
+.main {
   -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 10%, 100% 95.5%);
   clip-path: polygon(0% 100%, 0% 0%, 100% 10%, 100% 95.5%);
-  position: relative;
-  top: 12vh;
-  padding-top: 20vh;
+
   background: white;
   color: $main__text;
-  width: 100%;
-}
-
-
-@media (max-width: 800px) {
-  main {
-    -webkit-clip-path: polygon(0% 100%, 0% 7%, 100% 0%, 100% 96%);
-    clip-path: polygon(0% 100%, 0% 7%, 100% 0%, 100% 96%);
-    padding-top: 10vh;
-    top: 0;
-  }
 }

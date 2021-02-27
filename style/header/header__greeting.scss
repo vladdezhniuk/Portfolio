@@ -1,0 +1,20 @@
+.greeting {
+  &__container {
+    margin: 35vh 0;
+  }
+  &__heading {
+    font-size: 60px;
+    white-space: pre;
+    span {
+      display: inline-block;
+      position: relative;
+      z-index: 2;
+      transition: transform 0.3s ease-out;
+      &:hover{
+        color: $header-highlight_color;
+        transform: scale(1.5);
+        transform-origin: 20% 65%;
+      }
+    }
+  }
+}

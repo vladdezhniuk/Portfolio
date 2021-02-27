@@ -1,0 +1,41 @@
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 400px);
+  justify-items: center;
+  justify-content: space-around;
+  gap: 20px;
+
+  &__card {
+    height: 400px;
+    width: 400px;
+    perspective: 500px;
+    cursor: pointer;
+    .front {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      backface-visibility: hidden;
+      background: rgb(240, 240, 240, 0.7);
+      border-radius: 20px;
+      transition: transform 0.5s 0.1s;
+    }
+    .back {
+      transition: transform 0.5s 0.1s;
+      position: absolute;
+      transform: rotateY(180deg);
+    }
+    &:hover .front{
+      transform: rotateY(180deg);
+    }
+    &:hover .back{
+      transform: rotateY(360deg);
+    }
+  }
+  &__photo {
+    width: 100%;
+    border-radius: 20px;
+  }
+}

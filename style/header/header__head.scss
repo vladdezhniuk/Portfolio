@@ -1,0 +1,25 @@
+.head {
+  display: flex;
+  justify-content: space-between;
+  &__logo {
+    position: relative;
+    letter-spacing: 2px;
+    &:before{
+      width: 0;
+      display: inline-block;
+      color: $header-highlight_color;
+      content: attr(data-hover);
+      left: 0;
+      top: 0;
+      z-index: 2;
+      overflow: hidden;
+      position: absolute;
+      white-space: pre;
+      padding-bottom: 2px;
+      transition: width 0.3s;
+    }
+    &:hover::before {
+      width: 100%;
+    }
+  }
+}

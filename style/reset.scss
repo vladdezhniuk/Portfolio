@@ -2,22 +2,31 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: $font-family;
-  scroll-behavior: smooth;
-  font-size: $main_font-size;
-}
-
 body {
   margin: 0;
-  background: linear-gradient(rgba(0,0,0, 0.7),rgba(0,0,0, 0.7)), url(../img/background.jpg);
-  background-attachment: fixed;
-  background-size: 100%;
 }
 
-@media (max-width: 800px) { 
-  body{
-    background-attachment: scroll;
-    background-size: cover;
-  }
+section,
+div,
+form,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+input,
+ul,
+li {
+  margin: 0;
+  padding: 0;
 }
+
+a {
+  text-decoration: none;
+  color: $header_text;
+}
+
+
+

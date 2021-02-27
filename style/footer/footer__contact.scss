@@ -1,0 +1,16 @@
+.contact {
+  &__list {
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 50px auto;
+  }
+  &__icon {
+    transition: color 0.3s, transform 0.3s;
+    &:hover {
+      color:$header-highlight_color;
+      transform: scale(1.3);
+    }
+  }
+}

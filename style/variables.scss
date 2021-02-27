@@ -1,16 +1,6 @@
 $header_text: rgb(200, 200, 200);
 $main__text: rgb(70, 70, 70);
+$header-highlight_color: rgb(93, 16, 16);
 $highlight_color: rgb(52, 75, 77);
-$font-family: "Roboto", sans-serif;
-$main_font-size: 30px;
 
-
-@for $a from 1 through 5{
-stars--#{$a} {
-  stars__star {
-    &:nth-child(-n + #{$a}){
-      background-image: url();
-    }
-  }
-}
-}
+$phone-break-point: 768px;

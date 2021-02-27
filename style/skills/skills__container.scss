@@ -1,0 +1,25 @@
+.skills-container {
+  border-radius: 10px;
+  &__list {
+    margin: 0 auto;
+    padding: 20px 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    list-style: none;
+    background: $highlight_color;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5), 0 1px 30px  rgba(0, 0, 0, 0.4) ;
+  }
+  &__item {
+    .skill {
+      color: white;
+      transition: color 0.3s, transform 0.3s;
+      &:hover {
+        color: $header-highlight_color;
+        transform: scale(1.2);
+      }
+    }
+  }
+}

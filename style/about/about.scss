@@ -1,0 +1,16 @@
+.about {
+  @extend %max-content-width;
+  position: relative;
+  top: 20vh;
+  padding-bottom: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+
+  &__text{
+    width: 40vw;
+  }
+  &__gif {
+    max-width: 35%;
+  }
+}

@@ -1,0 +1,16 @@
+.skills {
+  background-color: rgb(240, 240, 240);
+  -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 10%, 100% 95.5%);
+  clip-path: polygon(0% 78%, 0% 30%, 100% 0%, 100% 100%);
+  position: relative;
+  padding: 20vh 0;
+  top: 20vh;
+
+  &__wrapper {
+  @extend %max-content-width;
+  }
+  &__heading {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}

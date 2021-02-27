@@ -1,0 +1,25 @@
+.about-text{
+  display: flex;
+  align-items: center;
+
+  &__heading {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    &::before,
+    &::after {
+      content: '';
+      width: 20%;
+      height: 8px;
+      position: absolute;
+      top: calc(0% - 20px);
+      background: $highlight_color;
+      border-radius: 10px;
+    }
+    &::after {
+      top: calc(100% + 20px);
+    }
+  }
+}

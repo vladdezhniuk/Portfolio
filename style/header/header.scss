@@ -1,0 +1,6 @@
+.header {
+  color: $header_text;
+  &__wrapper {
+    @extend %max-content-width;
+  }
+}
