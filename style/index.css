@@ -28,7 +28,7 @@ a {
   color: #c8c8c8;
 }
 
-.footer .contact, .projects__container, .skills__wrapper, .about, .header__wrapper {
+.footer .contact, .projects__container, .skills__wrapper, .about, .nav-mobile, .header__wrapper {
   max-width: 1280px;
   margin: 0 auto;
   padding: 20px 40px;
@@ -36,6 +36,7 @@ a {
 
 .header {
   color: #c8c8c8;
+  position: relative;
 }
 .head {
   display: flex;
@@ -81,7 +82,19 @@ a {
   transform: scale(1.5);
   transform-origin: 20% 65%;
 }
+.greeting__mobile {
+  display: none;
+}
 
+@media (max-width: 768px) {
+  .greeting__container {
+    display: none;
+  }
+  .greeting__mobile {
+    margin: 35vh 0;
+    display: inline-block;
+  }
+}
 .nav__list {
   display: flex;
   list-style: none;
@@ -108,7 +121,83 @@ a {
 .nav__link:hover::after {
   width: 100%;
 }
+.nav__menu {
+  width: 30px;
+  height: 20px;
+  display: none;
+  position: absolute;
+  right: 40px;
+  top: 24px;
+  bottom: 4px;
+  cursor: pointer;
+  z-index: 4;
+}
+.nav__menu div {
+  height: 4px;
+  margin-bottom: 4px;
+  background-color: #c8c8c8;
+  border-radius: 5px;
+}
+.nav__menu div:last-child {
+  border-bottom: 0;
+}
 
+@media (max-width: 768px) {
+  .nav__list {
+    display: none;
+  }
+  .nav__menu {
+    display: inline-block;
+  }
+
+  .change .burger__item-1 {
+    -webkit-transform: rotate(-45deg) translate(-4px, 6px);
+    transform: rotate(-45deg) translate(-4px, 6px);
+    transition: all 0.3s 0s linear;
+  }
+
+  .change .burger__item-2 {
+    opacity: 0;
+    transition: all 0.3s 0s linear;
+  }
+
+  .change .burger__item-3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+    transition: all 0.3s 0s linear;
+  }
+}
+.nav-mobile {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  display: none;
+  visibility: hidden;
+  background: #344b4d;
+}
+.nav-mobile__list {
+  font-size: 32px;
+  list-style: none;
+  margin-top: 30vh;
+  margin-bottom: 10vh;
+}
+.nav-mobile__item {
+  margin-bottom: 8vh;
+}
+.nav-mobile__call {
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .nav-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .main {
   -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 10%, 100% 95.5%);
   clip-path: polygon(0% 100%, 0% 0%, 100% 10%, 100% 95.5%);
@@ -118,7 +207,7 @@ a {
 
 .about {
   position: relative;
-  top: 20vh;
+  top: 15vh;
   padding-bottom: 0;
   display: flex;
   gap: 20px;
@@ -131,6 +220,20 @@ a {
   max-width: 35%;
 }
 
+@media (max-width: 768px) {
+  .about {
+    margin-top: 0;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 80px;
+  }
+  .about__text {
+    width: 80%;
+  }
+  .about__gif {
+    max-width: 80%;
+  }
+}
 .about-text {
   display: flex;
   align-items: center;
@@ -191,11 +294,21 @@ a {
   transform: scale(1.2);
 }
 
+@media (max-width: 768px) {
+  .skills-container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .skills-container__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
 .projects {
   position: relative;
   -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 20%, 100% 100%);
   clip-path: polygon(0% 100%, 0% 0%, 100% 15%, 100% 100%);
-  padding: 20vh 0;
+  padding: 12vh 0;
   background: #c8c8c8;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5), 0 1px 30px rgba(0, 0, 0, 0.4);
 }
@@ -205,15 +318,16 @@ a {
 }
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(2, 400px);
+  grid-template-columns: repeat(2, 1fr);
   justify-items: center;
-  justify-content: space-around;
+  justify-content: center;
   gap: 20px;
 }
 .projects-container__card {
   height: 400px;
   width: 400px;
   perspective: 500px;
+  transition: width 0.3s, height 0.3s;
   cursor: pointer;
 }
 .projects-container__card .front {
@@ -244,6 +358,18 @@ a {
   border-radius: 20px;
 }
 
+@media (max-width: 900px) {
+  .projects-container__card {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media (max-width: 500px) {
+  .projects-container__card {
+    width: 130px;
+    height: 130px;
+  }
+}
 .footer {
   -webkit-clip-path: polygon(0% 100%, 0% 25%, 100% 0%, 100% 100%);
   clip-path: polygon(0% 100%, 0% 25%, 100% 0%, 100% 100%);
@@ -263,13 +389,21 @@ a {
   transform: scale(1.3);
 }
 
+@media (max-width: 768px) {
+  .contact__list {
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
 html {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/background.jpg) top fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/background.jpg) fixed;
   background-size: cover;
 }
 

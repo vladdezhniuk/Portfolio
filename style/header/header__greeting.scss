@@ -17,4 +17,19 @@
       }
     }
   }
+  &__mobile {
+    display: none;
+  }
+}
+
+@media (max-width: $phone-break-point){
+  .greeting {
+    &__container {
+      display: none;
+    }
+    &__mobile {
+      margin: 35vh 0;
+      display: inline-block;
+    }
+  }
 }

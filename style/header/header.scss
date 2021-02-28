@@ -1,5 +1,6 @@
 .header {
   color: $header_text;
+  position: relative;
   &__wrapper {
     @extend %max-content-width;
   }

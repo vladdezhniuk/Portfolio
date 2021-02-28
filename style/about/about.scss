@@ -1,7 +1,7 @@
 .about {
   @extend %max-content-width;
   position: relative;
-  top: 20vh;
+  top: 15vh;
   padding-bottom: 0;
   display: flex;
   gap: 20px;
@@ -12,5 +12,20 @@
   }
   &__gif {
     max-width: 35%;
+  }
+}
+
+@media (max-width: $phone-break-point) {
+  .about {
+    margin-top: 0;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 80px;
+    &__text {
+      width: 80%;
+    }
+    &__gif {
+      max-width: 80%;
+    }
   }
 }

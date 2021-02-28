@@ -1,14 +1,15 @@
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(2, 400px);
+  grid-template-columns: repeat(2, 1fr);
   justify-items: center;
-  justify-content: space-around;
+  justify-content: center;
   gap: 20px;
 
   &__card {
     height: 400px;
     width: 400px;
     perspective: 500px;
+    transition: width 0.3s, height 0.3s;
     cursor: pointer;
     .front {
       position: absolute;
@@ -37,5 +38,23 @@
   &__photo {
     width: 100%;
     border-radius: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .projects-container {
+    &__card {
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .projects-container {
+    &__card {
+      width: 130px;
+      height: 130px;
+    }
   }
 }

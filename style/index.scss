@@ -5,6 +5,7 @@
 @import "header/header__head";
 @import "header/header__greeting";
 @import "header/nav";
+@import "header/nav__mobile";
 @import "main";
 @import "about/about";
 @import "about/about__text";
@@ -18,9 +19,10 @@
 html {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
+  scroll-behavior: smooth;
 }
 
 body {
-  background:  linear-gradient(rgba(0, 0, 0, 0.4), rgba(0,0,0, 0.4)), url(../img/background.jpg) top fixed;
+  background:  linear-gradient(rgba(0, 0, 0, 0.4), rgba(0,0,0, 0.4)), url(../img/background.jpg)  fixed;
   background-size: cover;
 }
