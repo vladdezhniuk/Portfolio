@@ -14,12 +14,3 @@
     }
   }
 }
-@media (max-width: $phone-break-point) {
-  .contact {
-    &__list {
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-  }
-}

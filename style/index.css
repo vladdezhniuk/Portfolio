@@ -391,13 +391,6 @@ a {
   transform: scale(1.3);
 }
 
-@media (max-width: 768px) {
-  .contact__list {
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-}
 html {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
