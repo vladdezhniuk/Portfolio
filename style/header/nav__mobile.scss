@@ -1,0 +1,32 @@
+.nav-mobile {
+  @extend %max-content-width;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  display: none;
+  visibility: hidden;
+  background: $highlight_color;
+  &__list {
+    font-size: 32px;
+    list-style: none;
+    margin-top: 30vh;
+    margin-bottom: 10vh;
+  }
+  &__item {
+    margin-bottom: 8vh;
+  }
+  &__call {
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: $phone-break-point) {
+  .nav-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+}
