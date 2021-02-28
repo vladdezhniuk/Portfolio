@@ -1,7 +1,7 @@
 .main {
   -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 10%, 100% 95.5%);
   clip-path: polygon(0% 100%, 0% 0%, 100% 10%, 100% 95.5%);
-
   background: white;
   color: $main__text;
+  position: relative;
 }
