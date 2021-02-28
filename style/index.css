@@ -84,6 +84,7 @@ a {
 }
 .greeting__mobile {
   display: none;
+  font-size: 32px;
 }
 
 @media (max-width: 768px) {
