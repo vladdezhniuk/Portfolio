@@ -173,11 +173,11 @@ a {
   height: 100vh;
   position: absolute;
   left: 0;
-  top: 0;
-  z-index: 3;
+  z-index: 2;
   display: none;
   visibility: hidden;
   background: #344b4d;
+  transition: top 0.3s, visibility 0.3s;
 }
 .nav-mobile__list {
   font-size: 32px;
