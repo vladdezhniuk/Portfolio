@@ -9,7 +9,7 @@
   display: none;
   visibility: hidden;
   background: $highlight_color;
-  transition: top 0.3s, visibility 0.3s;
+  transition: top 0.3s ease-in-out, visibility 0.3s;
   &__list {
     font-size: 32px;
     list-style: none;
