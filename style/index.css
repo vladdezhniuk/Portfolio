@@ -173,6 +173,7 @@ a {
   height: 100vh;
   position: absolute;
   left: 0;
+  top: -100vh;
   z-index: 2;
   display: none;
   visibility: hidden;
