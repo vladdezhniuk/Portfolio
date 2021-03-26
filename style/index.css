@@ -37,6 +37,7 @@ a {
 .header {
   color: #c8c8c8;
   position: relative;
+  overflow: hidden;
 }
 .head {
   display: flex;
@@ -178,7 +179,7 @@ a {
   display: none;
   visibility: hidden;
   background: #344b4d;
-  transition: top 0.3s, visibility 0.3s;
+  transition: top 0.3s ease-in-out, visibility 0.3s;
 }
 .nav-mobile__list {
   font-size: 32px;
@@ -198,6 +199,124 @@ a {
   .nav-mobile {
     display: flex;
     flex-direction: column;
+  }
+}
+.animation {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.animation__non-reverse {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+.animation__non-reverse .fa-moon {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  color: #b7990d;
+  transform: rotate(30deg);
+}
+.animation__non-reverse .fa-slash {
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+.animation__non-reverse .fa-heart {
+  position: absolute;
+  top: 80%;
+  left: 70%;
+  color: #8a817f;
+}
+.animation__non-reverse .fa-star {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  color: #ffb627;
+  transform: rotate(50deg);
+}
+.animation__non-reverse .fa-circle {
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  color: #7c72a0;
+}
+.animation__non-reverse .fa-square {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  transform: rotate(80deg);
+  color: #a5d0a8;
+}
+.animation__non-reverse .fa-bolt {
+  position: absolute;
+  top: 65%;
+  left: 10%;
+  transform: rotate(20deg);
+  color: #7d1d3f;
+}
+.animation__reverse {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+.animation__reverse .fa-moon {
+  position: absolute;
+  top: 78%;
+  left: 55%;
+  color: #ff82a9;
+  transform: rotate(250deg);
+}
+.animation__reverse .fa-slash {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  color: #999ac6;
+}
+.animation__reverse .fa-heart {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  color: #1a936f;
+}
+.animation__reverse .fa-star {
+  position: absolute;
+  top: 32%;
+  left: 6%;
+  color: #f86624;
+}
+.animation__reverse .fa-circle {
+  position: absolute;
+  top: 57%;
+  left: 85%;
+  color: #f86624;
+}
+.animation__reverse .fa-comment {
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  color: #63b995;
+}
+.animation__reverse .fa-square {
+  position: absolute;
+  top: 11%;
+  left: 90%;
+  color: #aaa95a;
+}
+.animation__reverse .fa-bolt {
+  position: absolute;
+  top: 15%;
+  left: 80%;
+  color: #1b2d2a;
+}
+
+@media (max-width: 768px) {
+  .animation {
+    display: none;
   }
 }
 .main {
