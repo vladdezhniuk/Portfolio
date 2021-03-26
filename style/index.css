@@ -518,7 +518,7 @@ html {
 }
 
 body {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/background.jpg) fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/background.jpg) fixed;
   background-size: cover;
 }
 @media (max-width: 768px) {
