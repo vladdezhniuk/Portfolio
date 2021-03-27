@@ -29,12 +29,16 @@ let translateReverseItem = document.querySelectorAll('.animation__reverse i')
 
 
 document.addEventListener('mousemove', (event) => {
-
+  console.log(event.target)
+  if(!event.target.closest('.header')) {
+    return
+  } else {
   let mouseY = event.clientY;
   let mouseX = event.clientX;
 
-  translate.style.top =  (mouseY / 10) + 'px';
-  translate.style.left =  (mouseX / 10) + 'px';
-  translateReverse.style.top = (-mouseY / 10) + 'px';
-  translateReverse.style.left = (-mouseX / 10) + 'px';
+  translate.style.top =  (mouseY / 25) + 'px';
+  translate.style.left =  (mouseX / 25) + 'px';
+  translateReverse.style.top = (-mouseY / 25) + 'px';
+  translateReverse.style.left = (-mouseX / 25) + 'px';
+  }
 })

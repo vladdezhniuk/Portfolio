@@ -241,7 +241,7 @@ a {
 }
 .animation__non-reverse .fa-circle {
   position: absolute;
-  top: 10%;
+  top: 40%;
   left: 40%;
   color: #7c72a0;
 }
@@ -258,6 +258,18 @@ a {
   left: 10%;
   transform: rotate(20deg);
   color: #7d1d3f;
+}
+.animation__non-reverse .fa-square,
+.animation__non-reverse .fa-star {
+  animation: rotation 20s linear infinite;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .animation__reverse {
   position: absolute;
@@ -277,12 +289,6 @@ a {
   left: 100%;
   color: #999ac6;
 }
-.animation__reverse .fa-heart {
-  position: absolute;
-  top: 20%;
-  left: 10%;
-  color: #1a936f;
-}
 .animation__reverse .fa-star {
   position: absolute;
   top: 32%;
@@ -295,12 +301,6 @@ a {
   left: 85%;
   color: #f86624;
 }
-.animation__reverse .fa-comment {
-  position: absolute;
-  top: 51%;
-  left: 50%;
-  color: #63b995;
-}
 .animation__reverse .fa-square {
   position: absolute;
   top: 11%;
@@ -311,7 +311,20 @@ a {
   position: absolute;
   top: 15%;
   left: 80%;
-  color: #1b2d2a;
+  color: #34534d;
+}
+.animation__reverse .fa-square,
+.animation__reverse .fa-star,
+.animation__reverse .fa-slash {
+  animation: rotation 20s linear reverse infinite;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 768px) {
