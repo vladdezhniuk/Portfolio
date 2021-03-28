@@ -5,17 +5,15 @@
     position: relative;
     letter-spacing: 2px;
     &:before{
+      content: attr(data-hover);
       width: 0;
       display: inline-block;
-      color: $header-highlight_color;
-      content: attr(data-hover);
+      position: absolute;
       left: 0;
       top: 0;
       z-index: 2;
+      color: $header-highlight_color;
       overflow: hidden;
-      position: absolute;
-      white-space: pre;
-      padding-bottom: 2px;
       transition: width 0.3s;
     }
     &:hover::before {

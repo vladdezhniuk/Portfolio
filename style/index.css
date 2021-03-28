@@ -48,17 +48,15 @@ a {
   letter-spacing: 2px;
 }
 .head__logo:before {
+  content: attr(data-hover);
   width: 0;
   display: inline-block;
-  color: #5d1010;
-  content: attr(data-hover);
+  position: absolute;
   left: 0;
   top: 0;
   z-index: 2;
+  color: #5d1010;
   overflow: hidden;
-  position: absolute;
-  white-space: pre;
-  padding-bottom: 2px;
   transition: width 0.3s;
 }
 .head__logo:hover::before {
@@ -80,8 +78,8 @@ a {
 }
 .greeting__heading span:hover {
   color: #5d1010;
-  transform: scale(1.5);
-  transform-origin: 20% 65%;
+  transform: scale(1.4);
+  transform-origin: 40% 65%;
 }
 .greeting__mobile {
   display: none;
@@ -214,53 +212,53 @@ a {
   height: 100vh;
   width: 100vw;
 }
-.animation__non-reverse .fa-moon {
+.animation__non-reverse .fa-js {
   position: absolute;
-  top: 0;
+  top: 20%;
   left: 25%;
   color: #b7990d;
-  transform: rotate(30deg);
+  animation: scale 12s 20s ease-in-out both infinite;
 }
-.animation__non-reverse .fa-slash {
+@keyframes scale {
+  20% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+}
+.animation__non-reverse .fa-react {
   position: absolute;
   top: 15%;
   left: 2%;
+  color: #63aed3;
 }
-.animation__non-reverse .fa-heart {
+.animation__non-reverse .fa-html5 {
   position: absolute;
   top: 80%;
   left: 70%;
-  color: #8a817f;
+  color: #ff8811;
+  animation: scale 12s 10s ease-in-out both infinite;
 }
-.animation__non-reverse .fa-star {
-  position: absolute;
-  top: 50%;
-  left: 60%;
-  color: #ffb627;
-  transform: rotate(50deg);
-}
-.animation__non-reverse .fa-circle {
-  position: absolute;
-  top: 40%;
-  left: 40%;
-  color: #7c72a0;
-}
-.animation__non-reverse .fa-square {
+.animation__non-reverse .fa-slash {
   position: absolute;
   top: 70%;
   left: 0;
   transform: rotate(80deg);
   color: #a5d0a8;
 }
-.animation__non-reverse .fa-bolt {
+.animation__non-reverse .fa-code-branch {
   position: absolute;
-  top: 65%;
-  left: 10%;
-  transform: rotate(20deg);
-  color: #7d1d3f;
+  top: 20%;
+  left: 75%;
+  color: #34534d;
+  animation: scale 12s 45s ease-in-out both infinite;
 }
-.animation__non-reverse .fa-square,
-.animation__non-reverse .fa-star {
+.animation__non-reverse .fa-react,
+.animation__non-reverse .fa-slash {
   animation: rotation 20s linear infinite;
 }
 @keyframes rotation {
@@ -276,54 +274,65 @@ a {
   height: 100vh;
   width: 100vw;
 }
-.animation__reverse .fa-moon {
+.animation__reverse .fa-css3-alt {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  color: #006494;
+  animation: scale 12s ease-in-out both infinite;
+}
+.animation__reverse .fa-terminal {
   position: absolute;
   top: 78%;
   left: 55%;
-  color: #ff82a9;
-  transform: rotate(250deg);
+  color: #60795f;
 }
 .animation__reverse .fa-slash {
   position: absolute;
-  top: 100%;
-  left: 100%;
+  top: 90%;
+  left: 90%;
   color: #999ac6;
 }
-.animation__reverse .fa-star {
+.animation__reverse .fa-sass {
   position: absolute;
-  top: 32%;
-  left: 6%;
-  color: #f86624;
+  top: 42%;
+  left: 60%;
+  color: #db3069;
+  animation: scale 12s 30s ease-in-out both infinite;
 }
-.animation__reverse .fa-circle {
+.animation__reverse .fa-react {
   position: absolute;
   top: 57%;
   left: 85%;
-  color: #f86624;
+  color: #63aed3;
+  animation: scale 12s 35s ease-in-out both infinite;
 }
-.animation__reverse .fa-square {
+.animation__reverse .fa-github {
   position: absolute;
   top: 11%;
   left: 90%;
   color: #aaa95a;
+  animation: scale 12s 25s ease-in-out both infinite;
 }
-.animation__reverse .fa-bolt {
-  position: absolute;
-  top: 15%;
-  left: 80%;
-  color: #34534d;
-}
-.animation__reverse .fa-square,
-.animation__reverse .fa-star,
+.animation__reverse .fa-react,
 .animation__reverse .fa-slash {
   animation: rotation 20s linear reverse infinite;
 }
-@keyframes rotation {
+.animation__reverse .fa-terminal {
+  animation: hide 2s linear infinite;
+}
+@keyframes hide {
   0% {
-    transform: rotate(0deg);
+    visibility: visible;
+  }
+  25% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
   }
   100% {
-    transform: rotate(360deg);
+    visibility: visible;
   }
 }
 
