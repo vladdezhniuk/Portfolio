@@ -12,7 +12,7 @@
     .fa-js {
       position: absolute;
       top: 20%;
-      left: 25%;
+      left: 45%;
       color: #b7990d;
       animation: scale 12s 20s ease-in-out both infinite;
       @keyframes scale {
@@ -27,36 +27,18 @@
         }
       }
     };
-    .fa-react {
-      position: absolute;
-      top: 15%;
-      left: 2%;
-      color: #63aed3;
-    };
     .fa-html5 {
       position: absolute;
       top: 80%;
       left: 70%;
       color: #ff8811;
       animation: scale 12s 10s ease-in-out both infinite ;
-
     };
-    .fa-slash {
+    .fa-react {
       position: absolute;
-      top: 70%;
-      left: 0;
-      transform: rotate(80deg);
-      color: #a5d0a8;
-    };
-    .fa-code-branch {
-      position: absolute;
-      top: 20%;
-      left: 75%;
-      color: #34534d;
-      animation: scale 12s 45s ease-in-out both infinite ;
-    }
-    .fa-react,
-    .fa-slash{
+      top: 15%;
+      left: 10%;
+      color: #63aed3;
       animation: rotation 20s linear infinite;
       @keyframes rotation {
         0% {
@@ -66,6 +48,13 @@
           transform: rotate(360deg);
         }
       }
+    }
+    .fa-code-branch {
+      position: absolute;
+      top: 90%;
+      left: 15%;
+      color: #34534d;
+      animation: scale 12s 45s ease-in-out both infinite ;
     }
   }
   &__reverse  {
@@ -85,12 +74,6 @@
       left: 55%;
       color: #60795f;
     };
-    .fa-slash {
-      position: absolute;
-      top: 90%;
-      left: 90%;
-      color: #999ac6;
-    };
     .fa-sass {
       position: absolute;
       top: 42%;
@@ -103,36 +86,15 @@
       top: 57%;
       left: 85%;
       color: #63aed3;
-      animation: scale 12s 35s ease-in-out both infinite ;
+      animation: rotation 20s linear reverse infinite;
     }
     .fa-github {
       position: absolute;
-      top: 11%;
-      left: 90%;
+      top: 17%;
+      left: 83%;
       color: #aaa95a;
       animation: scale 12s 25s ease-in-out both infinite ;
     };
-    .fa-react,
-    .fa-slash{
-      animation: rotation 20s linear reverse infinite;
-    }
-    .fa-terminal {
-      animation: hide 2s linear infinite;
-      @keyframes hide {
-        0% {
-          visibility: visible;
-        }
-        25% {
-          visibility: hidden;
-        }
-        50% {
-          visibility: hidden;
-        }
-        100% {
-          visibility: visible;
-        }
-      }
-    }
   }
 }
 
