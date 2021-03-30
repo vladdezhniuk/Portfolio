@@ -1,9 +1,10 @@
 .skills {
   background-color: rgb(240, 240, 240);
-  -webkit-clip-path: polygon(0% 90%, 0% 30%, 100% 0%, 100% 100%);
-  clip-path: polygon(0% 85%, 0% 30%, 100% 0%, 100% 100%);
+  -webkit-clip-path: polygon(0% 85%, 0% 0%, 100% 10%, 100% 100%);
+  clip-path: polygon(0% 85%, 0% 25%, 100% 0%, 100% 100%);
   position: relative;
-  padding: 15vh 0 22vh;
+  padding: 15vh 0 20vh;
+  top: 12vh;
   &__wrapper {
   @extend %max-content-width;
   }
