@@ -305,8 +305,8 @@ a {
   }
 }
 .main {
-  -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 10%, 100% 95.5%);
-  clip-path: polygon(0% 100%, 0% 0%, 100% 10%, 100% 95.5%);
+  -webkit-clip-path: polygon(0% 91%, 0% 0%, 100% 7%, 100% 87%);
+  clip-path: polygon(0% 91%, 0% 0%, 100% 7%, 100% 87%);
   background: white;
   color: #464646;
   position: relative;
@@ -314,8 +314,7 @@ a {
 
 .about {
   position: relative;
-  top: 15vh;
-  padding-bottom: 0;
+  padding-top: 15vh;
   display: flex;
   gap: 20px;
   justify-content: space-between;
@@ -366,11 +365,10 @@ a {
 
 .skills {
   background-color: #f0f0f0;
-  -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 10%, 100% 95.5%);
-  clip-path: polygon(0% 78%, 0% 30%, 100% 0%, 100% 100%);
+  -webkit-clip-path: polygon(0% 90%, 0% 30%, 100% 0%, 100% 100%);
+  clip-path: polygon(0% 85%, 0% 30%, 100% 0%, 100% 100%);
   position: relative;
-  padding: 20vh 0;
-  top: 20vh;
+  padding: 15vh 0 22vh;
 }
 .skills__heading {
   text-align: center;
@@ -413,9 +411,10 @@ a {
 }
 .projects {
   position: relative;
-  -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 20%, 100% 100%);
-  clip-path: polygon(0% 100%, 0% 0%, 100% 15%, 100% 100%);
-  padding: 12vh 0;
+  bottom: 14vh;
+  -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 11%, 100% 100%);
+  clip-path: polygon(0% 100%, 0% 0%, 100% 11%, 100% 100%);
+  padding: 15vh 0 27vh;
   background: #c8c8c8;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5), 0 1px 30px rgba(0, 0, 0, 0.4);
 }
@@ -433,26 +432,49 @@ a {
 .projects-container__card {
   height: 400px;
   width: 400px;
-  perspective: 500px;
+  perspective: 1000px;
   transition: width 0.3s, height 0.3s;
-  cursor: pointer;
 }
 .projects-container__card .front {
   position: absolute;
+  transition: transform 0.5s 0.1s;
+}
+.projects-container__card .back {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
   width: 100%;
-  backface-visibility: hidden;
-  background: rgba(240, 240, 240, 0.7);
-  border-radius: 20px;
-  transition: transform 0.5s 0.1s;
-}
-.projects-container__card .back {
-  transition: transform 0.5s 0.1s;
   position: absolute;
+  border-radius: 20px;
+  background: rgba(240, 240, 240, 0.8);
+  backface-visibility: hidden;
+  transition: transform 0.5s 0.1s;
   transform: rotateY(180deg);
+}
+.projects-container__card .back__text {
+  margin-top: 20px;
+}
+.projects-container__card .back__link {
+  color: #464646;
+  position: relative;
+}
+.projects-container__card .back__link::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -8px;
+  border-radius: 8px;
+  background-color: #464646;
+  transition: width 0.3s;
+}
+.projects-container__card .back__link:hover::after {
+  width: 100%;
 }
 .projects-container__card:hover .front {
   transform: rotateY(180deg);
@@ -480,6 +502,8 @@ a {
 .footer {
   -webkit-clip-path: polygon(0% 100%, 0% 25%, 100% 0%, 100% 100%);
   clip-path: polygon(0% 100%, 0% 25%, 100% 0%, 100% 100%);
+  position: relative;
+  bottom: 7vh;
 }
 .contact__list {
   max-width: 500px;

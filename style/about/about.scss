@@ -1,8 +1,7 @@
 .about {
   @extend %max-content-width;
   position: relative;
-  top: 15vh;
-  padding-bottom: 0;
+  padding-top: 15vh;
   display: flex;
   gap: 20px;
   justify-content: space-between;

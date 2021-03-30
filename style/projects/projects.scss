@@ -1,8 +1,9 @@
 .projects {
   position: relative;
-  -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 20%, 100% 100%);
-  clip-path: polygon(0% 100%, 0% 0%, 100% 15%, 100% 100%);
-  padding: 12vh 0;
+  bottom: 14vh;
+  -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 11%, 100% 100%);
+  clip-path: polygon(0% 100%, 0% 0%, 100% 11%, 100% 100%);
+  padding: 15vh 0 27vh;
   background: rgb(200, 200, 200);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5), 0 1px 30px  rgba(0, 0, 0, 0.4) ;
   &__heading {

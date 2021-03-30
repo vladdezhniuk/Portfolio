@@ -1,8 +1,8 @@
-const burger = document.getElementById('burger');
-const nav = document.getElementById('nav-mobile');
+const burger = document.querySelector('#burger');
+const nav = document.querySelector('#nav-mobile');
 
-burger.onclick = function() {
-  this.classList.toggle('change');
+burger.addEventListener('click', (event) => {
+  event.target.classList.toggle('change');
 
   if (nav.style.visibility === 'visible') {
     nav.style.visibility = 'hidden';
@@ -11,25 +11,20 @@ burger.onclick = function() {
     nav.style.visibility = 'visible';
     nav.style.top = '0';
   };
-};
+})
 
-let hover = document.getElementsByClassName('greeting__heading');
+let hover = document.querySelectorAll('.greeting__heading');
 
 for (let i = 0; i < hover.length; i++) {
     hover[i].innerHTML = hover[i].innerHTML.replace(/(.)/g, '<span>$1</span>');
 }
-
 
 let translate = document.querySelector('.animation__non-reverse');
 let translateReverse = document.querySelector('.animation__reverse');
 let translateItem = document.querySelectorAll('.animation__non-reverse i');
 let translateReverseItem = document.querySelectorAll('.animation__reverse i')
 
-
-
-
 document.addEventListener('mousemove', (event) => {
-  console.log(event.target)
   if(!event.target.closest('.header')) {
     return
   } else {
