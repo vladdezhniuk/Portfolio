@@ -1,7 +1,8 @@
 .main {
-  -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 8%, 100% 96%);
-  clip-path: polygon(0% 100%, 0% 0%, 100% 8%, 100% 96%);
-  background: white;
+  -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 6%, 100% 96%);
+  clip-path: polygon(0% 100%, 0% 0%, 100% 6%, 100% 96%);
+  background: #2a2a2a;
   color: $main__text;
   position: relative;
+  bottom: 14vh;
 }

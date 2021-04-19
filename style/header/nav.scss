@@ -8,6 +8,12 @@
   }
   &__link {
     position: relative;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $highlight_color;
+    }
+
     &::after {
       content: "";
       width: 0;

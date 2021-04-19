@@ -1,5 +1,5 @@
 .skills {
-  background-color: rgb(240, 240, 240);
+  background-color: #393939;
   -webkit-clip-path: polygon(0% 85%, 0% 0%, 100% 10%, 100% 100%);
   clip-path: polygon(0% 85%, 0% 25%, 100% 0%, 100% 100%);
   position: relative;
@@ -11,5 +11,6 @@
   &__heading {
     text-align: center;
     margin-bottom: 50px;
+    @extend %hover;
   }
 }

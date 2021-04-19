@@ -1,10 +1,18 @@
 .contact {
+  &__heading {
+    color: $header_text;
+    text-align: center;
+    z-index: 3;
+    margin: 20px 0;
+    @extend %hover;
+  }
   &__list {
     max-width: 500px;
     display: flex;
     justify-content: space-between;
     list-style: none;
-    margin: 50px auto;
+    margin: 0 auto;
+    margin-top: 80px;
   }
   &__icon {
     transition: color 0.3s, transform 0.3s;

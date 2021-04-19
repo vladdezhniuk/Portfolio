@@ -1,6 +1,8 @@
 .footer {
   -webkit-clip-path: polygon(0% 100%, 0% 25%, 100% 0%, 100% 100%);
   clip-path: polygon(0% 100%, 0% 25%, 100% 0%, 100% 100%);
+  position: relative;
+  bottom: 80px;
   .contact {
     @extend %max-content-width;
   }

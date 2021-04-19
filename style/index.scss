@@ -6,10 +6,11 @@
 @import "header/header__greeting";
 @import "header/nav";
 @import "header/nav__mobile";
-@import "header/header__animation.scss";
+@import "header/canvas.scss";
 @import "main";
 @import "about/about";
 @import "about/about__text";
+@import "about/about__icons.scss";
 @import "skills/skills";
 @import "skills/skills__container";
 @import "projects/projects";
@@ -23,7 +24,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background:  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0, 0.7)), url(../img/background.jpg)  fixed;
+  background: #1d1d1d;
   background-size: cover;
   @media (max-width: $phone-break-point) {
     background-size: 220%;

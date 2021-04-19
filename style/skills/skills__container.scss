@@ -3,9 +3,8 @@
   &__list {
     margin: 0 auto;
     padding: 20px 40px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
     list-style: none;
     background: $highlight_color;
@@ -29,8 +28,11 @@
     max-width: 400px;
     margin: 0 auto;
     &__list {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      justify-items: center;
+      gap: 5px;
     }
   }
 }

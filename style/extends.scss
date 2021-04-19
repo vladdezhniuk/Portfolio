@@ -3,3 +3,14 @@
   margin: 0 auto;
   padding: 20px 40px;
 }
+
+%hover {
+  letter-spacing: 2px;
+  transition: color 0.3s, text-shadow 0.3s;
+
+  &:hover {
+    color: $highlight_color;
+    text-shadow: 2px 2px 1px $header-highlight_color;
+  }
+
+}

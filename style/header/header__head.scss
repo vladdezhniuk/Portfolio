@@ -4,13 +4,19 @@
   &__logo {
     position: relative;
     letter-spacing: 2px;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $highlight_color;
+    }
+
     &:before{
       content: attr(data-hover);
       width: 0;
       display: inline-block;
       position: absolute;
-      left: 0;
-      top: 0;
+      left: -1px;
+      top: -1px;
       z-index: 2;
       color: $header-highlight_color;
       overflow: hidden;
