@@ -6,6 +6,7 @@
     margin: 20px 0;
     @extend %hover;
   }
+
   &__list {
     max-width: 500px;
     display: flex;
@@ -14,6 +15,7 @@
     margin: 0 auto;
     margin-top: 80px;
   }
+
   &__icon {
     transition: color 0.3s, transform 0.3s;
     &:hover {
