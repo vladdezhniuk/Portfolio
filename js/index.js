@@ -28,7 +28,7 @@ for (let i = 0; i < hover.length; i++) {
 
 
 
-
+let header = document.querySelector('.header')
 let canvas = document.querySelector('.canvas');
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
