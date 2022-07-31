@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import './index.scss'
 
 class NavigationLink {
@@ -19,7 +19,7 @@ export const Navbar = () => {
 
   return (
     <nav className="nav">
-      <NavLink className='nav__link nav__logo' to="/" datatype="vladdezhniuk">vladdezhniuk</NavLink>
+      <Link className='nav__link nav__logo' to="/" datatype="vladdezhniuk">vladdezhniuk</Link>
       <ul className='nav__list'>
         {navLinks.map((link: NavigationLink) =>
           <li className='nav__item' key={link.label} >

@@ -15,18 +15,18 @@ export const Description: React.FC = () => {
                 }
             </h2>
             <p className='description__text'>
-                Enthusiastic well-organised person with high attention to detail.
+                An enthusiastic well-organized person with high attention to detail.
             </p>
             <br />
             <p className='description__text'>
-                I create optimized, repsonsive web sites which builded with using best practises.
-                Also experienced with blockchain integration. My current stack is TS, JS, React, Redux, Redux-thunk ,
-                Ethers.js, Webpack, HTML5, SCSS
+                I create optimized, responsive websites built using best practices.
+                Also experienced with blockchain integration.
+                My current stack is TS, JS, React, Redux, Redux-thunk, Ethers.js, Webpack, HTML5, and SCSS.
             </p>
             <br />
             <p className='description__text'>
-                I enjoy delivering results and always do my best to achieve the goal. Rady to take new challenges, not afraid to
-                learn, improve and get better
+                I enjoy delivering results and always do my best to achieve the goal.
+                Ready to take on new challenges, not afraid to learn, improve and get better.
             </p>
         </div>
     )

@@ -11,7 +11,7 @@
         position: relative;
         font-size: 24px;
         line-height: 28px;
-        transition: color 0.2s ease-out;
+        transition: color 0.3s ease-out;
 
         &:before {
             content: attr(datatype);
@@ -23,7 +23,7 @@
             white-space: nowrap;
             color: $redHightlightColor;
             overflow: hidden;
-            transition: width 0.4s;
+            transition: width 0.5s;
         }
 
         &:hover {
@@ -37,10 +37,6 @@
 
     &__link.active {
         color: $redHightlightColor;
-    }
-
-    &__logo.active {
-        color: white;
     }
 
     &__list {
