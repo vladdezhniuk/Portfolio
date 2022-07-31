@@ -1,0 +1,30 @@
+@import "@/index.scss";
+
+.skills {
+    width: 50%;
+    animation: appearing 0.5s 1s ease-out both;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__item {
+        font-size: 24px;
+    }
+
+    &__level-wrapper {
+        margin-top: 10px;
+        height: 5px;
+        background-color: rgb(99 99 99);
+        border-radius: 10px;
+    }
+
+    &__level {
+        width: 0;
+        height: 100%;
+        border-radius: 10px;
+        transition: width 0.7s 2s;
+    }
+}

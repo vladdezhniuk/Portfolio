@@ -1,0 +1,58 @@
+@import "@/index.scss";
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @extend %wrapper;
+
+    &__link {
+        position: relative;
+        font-size: 24px;
+        line-height: 28px;
+        transition: color 0.2s ease-out;
+
+        &:before {
+            content: attr(datatype);
+            left: 0;
+            top: 0;
+            width: 0;
+            position: absolute;
+            z-index: 2;
+            white-space: nowrap;
+            color: $redHightlightColor;
+            overflow: hidden;
+            transition: width 0.4s;
+        }
+
+        &:hover {
+            color: $cyanHightlightColor;
+
+            &:before {
+                width: 100%;
+            }
+        }
+    }
+
+    &__link.active {
+        color: $redHightlightColor;
+    }
+
+    &__logo.active {
+        color: white;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

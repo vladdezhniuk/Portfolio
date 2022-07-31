@@ -1,0 +1,16 @@
+@import "@/index.scss";
+@import "@components/Home/Greeting/index.scss";
+
+.about {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+
+    @extend %wrapper;
+
+    &__experience-area {
+        width: 50%;
+    }
+}
