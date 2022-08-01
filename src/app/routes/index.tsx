@@ -39,19 +39,19 @@ export class RoutesConfig {
     public static Home = new ComponentRoutes(
         '/',
         <Home />
-    )
+    );
     public static About = new ComponentRoutes(
         '/about',
         <About />
-    )
+    );
     public static Projects = new ComponentRoutes(
         '/projects',
         <Projects />
-    )
+    );
     public static Contact = new ComponentRoutes(
         '/contact-me',
         <Contact />
-    )
+    );
 
     /** Routes is an array of logical router components */
     public static routes: ComponentRoutes[] = [
@@ -59,7 +59,7 @@ export class RoutesConfig {
         RoutesConfig.About,
         RoutesConfig.Projects,
         RoutesConfig.Contact,
-    ]
+    ];
 }
 
 export const Switch = () =>

@@ -1,24 +1,21 @@
-import React from 'react'
+import React from 'react';
 
 import './index.scss';
 
-export const Heading: React.FC<{ message: string }> = ({ message }) => {
+export const Heading: React.FC<{ message: string }> = ({ message }) =>
+    <h1 className="heading">
+        {message.split('').map((letter: string, index: number) =>
+            <>
+                <span
+                    className="heading__letter"
+                    key={letter}
+                    datatype={letter}
+                    style={{ animationDelay: `${0.1 * index}s` }}
+                >
+                    {letter}
+                </span>
+                {letter === ',' && <br />}
+            </>
+        )}
+    </h1>;
 
-    return (
-        <h1 className='heading'>
-            {message.split('').map((letter: string, index: number) =>
-                <>
-                    <span
-                        className='heading__letter'
-                        key={letter}
-                        datatype={letter}
-                        style={{ animationDelay: `${0.1 * index}s` }}
-                    >
-                        {letter}
-                    </span>
-                    {letter === "," && <br />}
-                </>
-            )}
-        </h1>
-    )
-}

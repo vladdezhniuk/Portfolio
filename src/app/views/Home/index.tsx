@@ -7,14 +7,11 @@ import { RoutesConfig } from '@/app/routes';
 
 import './index.scss';
 
-export const Home: React.FC = () => {
+export const Home: React.FC = () =>
+    <section className="home">
+        <Background />
+        <Heading message="Hi, I`m Vlad, Front end developer" />
+        <Link className="home__contact-me" to={RoutesConfig.Contact.path} datatype={'Contact Me'}>
+        </Link>
+    </section>;
 
-  return (
-    <section className='home'>
-      <Background />
-      <Heading message='Hi, I`m Vlad, Front end developer' />
-      <Link className='home__contact-me' to={RoutesConfig.Contact.path} datatype={'Contact Me'}>
-      </Link>
-    </section>
-  )
-}

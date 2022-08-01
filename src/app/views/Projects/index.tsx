@@ -4,7 +4,7 @@ import amuzed from '@static/images/Projects/amuzed.png';
 import ultimatedivision from '@static/images/Projects/ultimatedivision.png';
 import minotaur from '@static/images/Projects/minotaur.png';
 
-import './index.scss'
+import './index.scss';
 
 class Project {
     constructor(
@@ -36,11 +36,11 @@ export const Projects: React.FC = () => {
         ),
         new Project(
             'Minotaur',
-            `NFT drop constructor`,
+            'NFT drop constructor',
             minotaur,
             'http://ec2-35-159-50-177.eu-central-1.compute.amazonaws.com:9012/'
         ),
-    ]
+    ];
     const settings = {
         speed: 500,
         arrows: true,
@@ -48,8 +48,9 @@ export const Projects: React.FC = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
     };
+
     return (
-        <section className='projects'>
+        <section className="projects">
             <Slider {...settings} className="slider">
                 {projects.map((project: Project) =>
                     <a
@@ -58,14 +59,14 @@ export const Projects: React.FC = () => {
                         className="projects__item"
                         key={project.name}
                     >
-                        <img className='projects__preview' src={project.preview} alt="project preview" />
+                        <img className="projects__preview" src={project.preview} alt="project preview" />
                         <div className="projects__item__text-area">
                             <h6 className="projects__item__name">{project.name}</h6>
-                            <p className='projects__item__description'>{project.description}</p>
+                            <p className="projects__item__description">{project.description}</p>
                         </div>
                     </a>
                 )}
             </Slider>
         </section>
-    )
-}
+    );
+};
