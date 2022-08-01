@@ -1,3 +1,4 @@
+import { RoutesConfig } from '@/app/routes'
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import './index.scss'
@@ -12,14 +13,20 @@ class NavigationLink {
 export const Navbar = () => {
 
   const navLinks = [
-    new NavigationLink('About', '/about'),
-    new NavigationLink('Projects', '/projects'),
-    new NavigationLink('Contact me', '/contact'),
+    new NavigationLink('About', RoutesConfig.About.path),
+    new NavigationLink('Projects', RoutesConfig.Projects.path),
+    new NavigationLink('Contact me', RoutesConfig.Contact.path),
   ]
 
   return (
     <nav className="nav">
-      <Link className='nav__link nav__logo' to="/" datatype="vladdezhniuk">vladdezhniuk</Link>
+      <Link
+        className='nav__link nav__logo'
+        to={RoutesConfig.Home.path}
+        datatype="vladdezhniuk"
+      >
+        vladdezhniuk
+      </Link>
       <ul className='nav__list'>
         {navLinks.map((link: NavigationLink) =>
           <li className='nav__item' key={link.label} >

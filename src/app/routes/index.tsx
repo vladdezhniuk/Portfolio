@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Home } from '@/app/views/Home';
 import { About } from '@/app/views/About';
 import { Projects } from '@/app/views/Projects';
+import { Contact } from '@/app/views/Contact';
 
 export class ComponentRoutes {
     constructor(
@@ -47,12 +48,17 @@ export class RoutesConfig {
         '/projects',
         <Projects />
     )
+    public static Contact = new ComponentRoutes(
+        '/contact-me',
+        <Contact />
+    )
 
     /** Routes is an array of logical router components */
     public static routes: ComponentRoutes[] = [
         RoutesConfig.Home,
         RoutesConfig.About,
         RoutesConfig.Projects,
+        RoutesConfig.Contact,
     ]
 }
 

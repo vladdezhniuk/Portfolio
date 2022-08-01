@@ -32,7 +32,7 @@ export const Skills: React.FC = () => {
         <div className='skills'>
             <ul className='skills__list'>
                 {skills.map((skill: Skill, index: number) =>
-                    <li className='skills__item'>
+                    <li className='skills__item' key={skill.name}>
                         <h5 className='skills__title'>{skill.name}</h5>
                         <div className="skills__level-wrapper">
                             <div

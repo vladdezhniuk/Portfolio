@@ -21,13 +21,13 @@
             position: absolute;
             z-index: 2;
             white-space: nowrap;
-            color: $redHightlightColor;
+            color: $cyanHightlightColor;
             overflow: hidden;
             transition: width 0.5s;
         }
 
         &:hover {
-            color: $cyanHightlightColor;
+            color: $redHightlightColor;
 
             &:before {
                 width: 100%;
@@ -36,7 +36,7 @@
     }
 
     &__link.active {
-        color: $redHightlightColor;
+        color: $cyanHightlightColor;
     }
 
     &__list {

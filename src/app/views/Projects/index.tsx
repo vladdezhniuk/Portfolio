@@ -52,7 +52,12 @@ export const Projects: React.FC = () => {
         <section className='projects'>
             <Slider {...settings} className="slider">
                 {projects.map((project: Project) =>
-                    <a href={project.url} target="_blank" className="projects__item" key={project.name}>
+                    <a
+                        href={project.url}
+                        target="_blank"
+                        className="projects__item"
+                        key={project.name}
+                    >
                         <img className='projects__preview' src={project.preview} alt="project preview" />
                         <div className="projects__item__text-area">
                             <h6 className="projects__item__name">{project.name}</h6>

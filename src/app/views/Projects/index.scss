@@ -62,7 +62,7 @@
             left: 0;
             right: 0;
             margin: 0 auto;
-            bottom: 20%;
+            bottom: 25%;
             position: absolute;
             z-index: 3;
         }
@@ -75,11 +75,11 @@
         &__description {
             display: flex;
             align-items: flex-end;
-            font-size: 20px;
+            font-size: 24px;
             width: 70%;
             height: 0;
             overflow-y: hidden;
-            transition: height 0.3s;
+            transition: height 0.5s;
         }
 
         &:hover {
@@ -95,9 +95,8 @@
     }
 
     &__preview {
-        transition: all 0.3s;
+        transition: all 0.5s;
         cursor: pointer;
         width: 100%;
-        filter: blur(1px);
     }
 }

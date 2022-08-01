@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 
 import { Background } from '@/app/components/Home/Background';
-import { Greeting } from '@/app/components/Home/Greeting';
+import { Heading } from '@/app/components/common/Heading';
+
+import { RoutesConfig } from '@/app/routes';
 
 import './index.scss';
 
@@ -10,8 +12,8 @@ export const Home: React.FC = () => {
   return (
     <section className='home'>
       <Background />
-      <Greeting  />
-      <Link className='home__contact-me' to={'/contact'} datatype={'Contact Me'}>
+      <Heading message='Hi, I`m Vlad, Front end developer' />
+      <Link className='home__contact-me' to={RoutesConfig.Contact.path} datatype={'Contact Me'}>
       </Link>
     </section>
   )

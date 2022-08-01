@@ -1,19 +1,11 @@
 import React from 'react'
+import { Heading } from '../../common/Heading';
 import './index.scss';
 
 export const Description: React.FC = () => {
-    const title = 'About Me';
     return (
         <div className='description'>
-            <h2 className='description__title'>
-                {
-                    title.split('').map((letter: string, index: number) =>
-                        <span className='description__title__letter' key={letter} datatype={letter} style={{ animationDelay: `${0.1 * index}s` }}>
-                            {letter}
-                        </span>
-                    )
-                }
-            </h2>
+            <Heading message='About Me' />
             <p className='description__text'>
                 An enthusiastic well-organized person with high attention to detail.
             </p>
