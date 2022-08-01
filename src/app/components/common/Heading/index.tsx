@@ -2,7 +2,7 @@ import React from 'react';
 
 import './index.scss';
 
-export const Heading: React.FC<{ message: string, className?: string }> = ({ message, className = '' }) =>
+export const Heading: React.FC<{ message: string; className?: string }> = ({ message, className = '' }) =>
     <h1 className={`heading ${className}`}>
         {message.split('').map((letter: string, index: number) =>
             <>

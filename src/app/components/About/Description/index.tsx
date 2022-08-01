@@ -6,7 +6,7 @@ import './index.scss';
 
 export const Description: React.FC = () =>
     <div className="description">
-        <Heading message="About Me" className='about-heading' />
+        <Heading message="About Me" className="about-heading" />
         <p className="description__text">
                 An enthusiastic well-organized person with high attention to detail.
         </p>

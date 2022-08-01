@@ -24,7 +24,7 @@ export const Navbar = () => {
                 to={RoutesConfig.Home.path}
                 datatype="vladdezhniuk"
             >
-        vladdezhniuk
+                vladdezhniuk
             </Link>
             <ul className="nav__list">
                 {navLinks.map((link: NavigationLink) =>
