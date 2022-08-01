@@ -3,21 +3,13 @@
 .description {
     width: 50%;
 
-    &__title {
-        margin-bottom: 40px;
+    .about-heading {
 
         &__letter {
             color: $cyanHightlightColor;
-            font-weight: 700;
-            font-size: 60px;
-            cursor: pointer;
-            transition: all 0.2s linear;
-            opacity: 0;
-            animation: appearing 0.3s ease-out both;
 
             &:hover {
-                color: $redHightlightColor;
-                text-shadow: 3px 5px $cyanHightlightColor;
+                text-shadow: none;
             }
         }
     }

@@ -13,23 +13,30 @@
         line-height: 28px;
         transition: color 0.3s ease-out;
 
-        &:before {
+        &:before,
+        &:after {
             content: attr(datatype);
             left: 0;
             top: 0;
             width: 0;
             position: absolute;
-            z-index: 2;
+            z-index: 3;
             white-space: nowrap;
             color: $cyanHightlightColor;
             overflow: hidden;
-            transition: width 0.5s;
+            transition: width 0.6s;
+        }
+
+        &:after {
+            color: $redHightlightColor;
+            transition: width 0.3s;
+            z-index: 2;
         }
 
         &:hover {
-            color: $redHightlightColor;
 
-            &:before {
+            &:before,
+            &:after {
                 width: 100%;
             }
         }
