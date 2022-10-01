@@ -34,7 +34,7 @@ export const Skills: React.FC = () => {
         const TRANSITION_DELAY_PER_ITEM = 0.2;
 
         return BASE_TRANSITION_DELAY + TRANSITION_DELAY_PER_ITEM * index;
-    }
+    };
 
     return (
         <div className="skills">
@@ -49,7 +49,7 @@ export const Skills: React.FC = () => {
                                 style={{
                                     width: `${levels[index]}%`,
                                     backgroundColor: `${skill.color}`,
-                                    transitionDelay: `${calculateDelay(index)}s`
+                                    transitionDelay: `${calculateDelay(index)}s`,
                                 }}
                             />
                         </div>
