@@ -10,7 +10,7 @@ export const Heading: React.FC<{ message: string; className?: string }> = ({ mes
                     className={`heading__letter ${className && `${className}__letter`}`}
                     key={letter}
                     datatype={letter}
-                    style={{ animationDelay: `${0.1 * index}s` }}
+                    style={{ animationDelay: `${0.4 + 0.1 * index}s` }}
                 >
                     {letter}
                 </span>

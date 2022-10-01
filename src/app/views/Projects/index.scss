@@ -6,7 +6,7 @@
     .slider {
         height: calc(100vh - 100px);
         max-height: 800px;
-        animation: appearing 0.3s linear;
+        animation: fade 0.3s linear;
     }
 
     .slick-slide {

@@ -29,6 +29,13 @@ export const Skills: React.FC = () => {
         return () => { clearTimeout(timeout); };
     });
 
+    const calculateDelay = (index: number) => {
+        const BASE_TRANSITION_DELAY = 0.8;
+        const TRANSITION_DELAY_PER_ITEM = 0.2;
+
+        return BASE_TRANSITION_DELAY + TRANSITION_DELAY_PER_ITEM * index;
+    }
+
     return (
         <div className="skills">
             <ul className="skills__list">
@@ -39,7 +46,11 @@ export const Skills: React.FC = () => {
                             <div
                                 datatype={`${skill.level}%`}
                                 className="skills__level"
-                                style={{ width: `${levels[index]}%`, backgroundColor: `${skill.color}`, transitionDelay: `${0.2* index}s` }}
+                                style={{
+                                    width: `${levels[index]}%`,
+                                    backgroundColor: `${skill.color}`,
+                                    transitionDelay: `${calculateDelay(index)}s`
+                                }}
                             />
                         </div>
                     </li>

@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, useContext } from 'react';
+import React, { useContext } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { LoaderContext } from '@/app/context/loader';
 
@@ -25,10 +25,10 @@ export const NavLinkWithDelay: React.FC<DelayedLinkProps> = ({ to, className, ch
         setIsLoading(true);
         setTimeout(() => {
             navigate(to);
-        }, 1000);
+        }, 1500);
         setTimeout(() => {
             setIsLoading(false);
-        }, 1500);
+        }, 2000);
     };
 
     return (

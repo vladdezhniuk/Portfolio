@@ -1,4 +1,4 @@
-@keyframes appearing {
+@keyframes fade {
 
     from {
         opacity: 0;
@@ -9,7 +9,7 @@
     }
 }
 
-@keyframes text-appearing {
+@keyframes fade-translate {
 
     from {
         opacity: 0;
@@ -22,7 +22,7 @@
     }
 }
 
-@keyframes text-appearing-reversed {
+@keyframes fade-translate-reversed {
 
     from {
         opacity: 0;
@@ -62,5 +62,35 @@
 
     100% {
         transform: translateX(3000px);
+    }
+}
+
+@keyframes loader-translate {
+
+    0% {
+        transform: translateX(-100vw);
+    }
+
+    15% {
+        transform: translateX(0);
+    }
+
+    85% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+@keyframes loading-letters {
+
+    from {
+        clip-path: polygon(0 0, 15% 0, 15% 100%, 0% 100%);
+    }
+
+    to {
+        clip-path: polygon(85% 0, 100% 0, 100% 100%, 85% 100%);
     }
 }

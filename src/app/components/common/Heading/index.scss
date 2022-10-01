@@ -10,7 +10,7 @@
         cursor: pointer;
         transition: all 0.2s linear;
         opacity: 0;
-        animation: appearing 0.3s ease-out both;
+        animation: fade 0.3s ease-out both;
 
         &:hover {
             color: $redHightlightColor;

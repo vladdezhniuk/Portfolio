@@ -8,7 +8,7 @@
     @extend %wrapper;
 
     &__logo {
-        animation: appearing 0.3s linear both;
+        animation: fade 0.3s linear both;
     }
 
     &__list {
@@ -19,7 +19,7 @@
     }
 
     &__item {
-        animation: appearing 0.3s linear both;
+        animation: fade 0.3s linear both;
 
         @include listAnimationDelay(3, 0.2s, 0.1s);
     }
