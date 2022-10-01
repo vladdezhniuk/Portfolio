@@ -11,7 +11,11 @@
     }
 
     &__item {
+        position: relative;
         font-size: 24px;
+        animation: text-appearing 0.5s linear both;
+
+        @include listAnimationDelay(6, 0.6s, 0.2s);
     }
 
     &__level-wrapper {

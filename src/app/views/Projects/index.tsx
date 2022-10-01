@@ -1,8 +1,9 @@
+import { useState } from 'react';
 import Slider from 'react-slick';
 
-import amuzed from '@static/images/Projects/amuzed.png';
-import ultimatedivision from '@static/images/Projects/ultimatedivision.png';
-import minotaur from '@static/images/Projects/minotaur.png';
+import amuzed from '@static/images/projects/amuzed.png';
+import ultimatedivision from '@static/images/projects/ultimatedivision.png';
+import minotaur from '@static/images/projects/minotaur.png';
 
 import './index.scss';
 
@@ -42,29 +43,46 @@ export const Projects: React.FC = () => {
         ),
     ];
     const settings = {
-        speed: 500,
+        speed: 300,
         arrows: true,
         autoplay: true,
         slidesToShow: 1,
         slidesToScroll: 1,
     };
 
+    const [isFocused, setIsFocused] = useState<boolean>(false);
+
     return (
         <section className="projects">
             <Slider {...settings} className="slider">
                 {projects.map((project: Project) =>
-                    <a
-                        href={project.url}
-                        target="_blank"
+                    <div
                         className="projects__item"
                         key={project.name}
                     >
-                        <img className="projects__preview" src={project.preview} alt="project preview" />
-                        <div className="projects__item__text-area">
-                            <h6 className="projects__item__name">{project.name}</h6>
-                            <p className="projects__item__description">{project.description}</p>
+                        <img
+                            className={`projects__preview${isFocused ? '-focused' : ''}`}
+                            src={project.preview}
+                            alt="project preview"
+                        />
+                        <div
+                            className="projects__item__text-area"
+                            onMouseEnter={() => setIsFocused(true)}
+                            onMouseLeave={() => setIsFocused(false)}
+                        >
+                            <a
+                                href={project.url}
+                                target="_blank"
+                                className="projects__link"
+                                key={project.name}
+                            >
+                                <h6 className="projects__item__name">{project.name}</h6>
+                                <div className="projects__item__description-wrapper">
+                                    <p className="projects__item__description">{project.description}</p>
+                                </div>
+                            </a>
                         </div>
-                    </a>
+                    </div>
                 )}
             </Slider>
         </section>

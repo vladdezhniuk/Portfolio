@@ -7,6 +7,23 @@
 
     @extend %wrapper;
 
+    &__logo {
+        animation: appearing 0.3s linear both;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__item {
+        animation: appearing 0.3s linear both;
+
+        @include listAnimationDelay(3, 0.2s, 0.1s);
+    }
+
     &__link {
         position: relative;
         font-size: 24px;
@@ -44,18 +61,5 @@
 
     &__link.active {
         color: $cyanHightlightColor;
-    }
-
-    &__list {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-    }
-
-    &__item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 }

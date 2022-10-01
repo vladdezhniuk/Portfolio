@@ -1,3 +1,12 @@
 /* Mixins allows to define styles that can be re-used throughout stylesheet.
 * It makes easy to avoid using non-semantic classes,
 * and to distribute collections of styles in libraries. */
+
+/* Mixin for gradual rendering of list items */
+@mixin listAnimationDelay($length, $baseDelay, $delayPerItem) {
+    @for $i from 1 through $length {
+        &:nth-of-type(#{$i}) {
+            animation-delay: calc($baseDelay + $i * $delayPerItem);
+        }
+    }
+}
