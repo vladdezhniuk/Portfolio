@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { RoutesConfig } from '@/app/routes';
 import './index.scss';
+import { NavLinkWithDelay } from '../DelayedLink';
 
 class NavigationLink {
     constructor(
@@ -19,19 +20,19 @@ export const Navbar = () => {
 
     return (
         <nav className="nav">
-            <Link
+            <NavLinkWithDelay
                 className="nav__link nav__logo"
                 to={RoutesConfig.Home.path}
                 datatype="vladdezhniuk"
             >
                 vladdezhniuk
-            </Link>
+            </NavLinkWithDelay>
             <ul className="nav__list">
                 {navLinks.map((link: NavigationLink) =>
                     <li className="nav__item" key={link.label} >
-                        <NavLink to={link.url} className="nav__link" datatype={link.label} >
+                        <NavLinkWithDelay to={link.url} className="nav__link" datatype={link.label} >
                             {link.label}
-                        </NavLink>
+                        </NavLinkWithDelay>
                     </li>
                 )}
             </ul>
