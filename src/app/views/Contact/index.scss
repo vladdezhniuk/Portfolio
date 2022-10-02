@@ -1,5 +1,21 @@
 @import "@/index.scss";
 
 .contact {
-    border: 1px solid red;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @extend %wrapper;
+
+    &__heading {
+
+        &__letter {
+            color: $cyanHightlightColor;
+
+            &:hover {
+                text-shadow: none;
+            }
+        }
+    }
 }

@@ -1,13 +1,13 @@
 @import "@/index.scss";
 
 .about {
+    @extend %wrapper;
+
     flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10%;
-
-    @extend %wrapper;
 
     &__experience-area {
         width: 50%;

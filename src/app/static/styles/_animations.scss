@@ -9,7 +9,7 @@
     }
 }
 
-@keyframes fade-translate {
+@keyframes fade-left {
 
     from {
         opacity: 0;
@@ -22,7 +22,7 @@
     }
 }
 
-@keyframes fade-translate-reversed {
+@keyframes fade-right {
 
     from {
         opacity: 0;
@@ -32,6 +32,19 @@
     to {
         opacity: 1;
         right: 0;
+    }
+}
+
+@keyframes fade-up {
+
+    from {
+        opacity: 0;
+        top: 50vw;
+    }
+
+    to {
+        opacity: 1;
+        top: 0;
     }
 }
 
