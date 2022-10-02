@@ -8,7 +8,7 @@ import './index.scss';
 export const Contact = () =>
     <section className="contact">
         <div className="contact__form-area">
-            <Heading message='Contact me' className='contact__heading' />
+            <Heading message="Contact me" className="contact__heading" />
             <Form />
         </div>
         <div className="contact__map-area"></div>
