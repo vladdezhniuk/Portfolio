@@ -9,24 +9,24 @@ export const Form = () => {
     const [email, setEmail] = useState<string>('');
     const [message, setMessage] = useState<string>('');
 
-    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async(event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         try {
             await fetch(FORM_ENDPOINT, {
-                method: "POST",
+                method: 'POST',
                 headers: {
-                    Accept: "application/json",
-                    "Content-Type": "application/json",
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
                     name,
                     email,
-                    message
+                    message,
                 }),
-            })
+            });
         } catch (error) { }
+    };
 
-    }
     return (
         <form
             className="form"
@@ -38,14 +38,14 @@ export const Form = () => {
                 type="text"
                 placeholder="Name"
                 className="form__name"
-                id='name'
+                id="name"
                 onChange={e => setName(e.target.value)}
             />
             <input
                 type="email"
                 placeholder="Enter email"
                 className="form__email"
-                id='email'
+                id="email"
                 onChange={e => setEmail(e.target.value)}
             />
             <input
@@ -63,5 +63,5 @@ export const Form = () => {
                 Hit me up
             </button>
         </form>
-    )
-}
+    );
+};
