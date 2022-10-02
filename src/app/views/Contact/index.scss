@@ -4,7 +4,7 @@
     flex-grow: 1;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
 
     @extend %wrapper;
 
@@ -17,5 +17,19 @@
                 text-shadow: none;
             }
         }
+    }
+
+    &__form-area {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    &__map {
+        margin-left: 5%;
+        width: 50%;
+        min-width: 400px;
     }
 }

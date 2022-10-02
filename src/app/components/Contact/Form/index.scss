@@ -1,8 +1,8 @@
 @import "@/index.scss";
 
 .form {
+    width: 100%;
     margin-top: 80px;
-    width: 800px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 20px;
@@ -11,6 +11,7 @@
     &__name,
     &__email,
     &__message {
+        width: 100%;
         position: relative;
         padding: 20px 30px;
         border: none;
