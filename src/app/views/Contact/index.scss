@@ -33,3 +33,21 @@
         min-width: 400px;
     }
 }
+
+@media (max-width: $tabletBreakPoint) {
+
+    .contact {
+        flex-direction: column;
+
+        &__form-area {
+            width: 100%;
+        }
+
+        &__map {
+            margin: 80px 0 40px;
+            width: 100%;
+            min-width: unset;
+            aspect-ratio: 1;
+        }
+    }
+}
