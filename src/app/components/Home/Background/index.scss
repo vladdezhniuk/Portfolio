@@ -62,3 +62,30 @@
         }
     }
 }
+
+@media (max-width: $phoneBreakPoint) {
+
+    .home-background {
+
+        &__text,
+        &__text-bordered {
+            font-size: 15rem;
+            line-height: 17rem;
+
+            &:last-child {
+                left: 3032px;
+            }
+        }
+
+        &__text-bordered {
+            color: transparent;
+            left: -4323px;
+
+            &:last-child {
+                left: -3500px;
+                transform: translateX(3000px);
+                animation: translate-reversed 60s 1.5s linear infinite;
+            }
+        }
+    }
+}

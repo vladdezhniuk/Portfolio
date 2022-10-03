@@ -1,21 +1,24 @@
 @import "@/index.scss";
 
 .nav {
+    @extend %wrapper;
+
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    @extend %wrapper;
 
     &__logo {
         animation: fade 0.3s linear both;
     }
 
-    &__list {
+    &__list,
+    &__list-active {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 20px;
+        transition: height 0.3s ease-out;
     }
 
     &__item {
@@ -65,5 +68,51 @@
 
     &__logo.active {
         color: white;
+    }
+
+    &__control {
+        display: none;
+    }
+}
+
+@media (max-width: $phoneBreakPoint) {
+
+    .nav {
+
+        &__list,
+        &__list-active {
+            position: absolute;
+            top: 68px;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 68px);
+            z-index: 2;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 0 5%;
+            overflow: hidden;
+            background-color: $mainBackgroundColor;
+        }
+
+        &__list {
+            height: 0;
+
+            .nav__item {
+                display: none;
+            }
+        }
+
+        &__item {
+            margin-top: 80px;
+
+            &:first-child {
+                margin-top: 200px;
+            }
+        }
+
+        &__control {
+            width: 21px;
+            display: block;
+        }
     }
 }

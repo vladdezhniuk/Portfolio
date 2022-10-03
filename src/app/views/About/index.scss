@@ -8,8 +8,12 @@
     justify-content: center;
     align-items: center;
     gap: 10%;
+}
 
-    &__experience-area {
-        width: 50%;
+@media (max-width: $tabletBreakPoint) {
+
+    .about {
+        padding: 40px 5%;
+        flex-direction: column;
     }
 }

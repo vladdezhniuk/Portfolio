@@ -24,3 +24,10 @@
         @include listAnimationDelay(3, 1.2s, 0.2s);
     }
 }
+
+@media (max-width: $tabletBreakPoint) {
+
+    .description {
+        width: 100%;
+    }
+}

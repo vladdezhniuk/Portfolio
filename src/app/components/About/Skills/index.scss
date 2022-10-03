@@ -32,3 +32,11 @@
         transition: width 0.7s 2s;
     }
 }
+
+@media (max-width: $tabletBreakPoint) {
+
+    .skills {
+        margin-top: 60px;
+        width: 100%;
+    }
+}

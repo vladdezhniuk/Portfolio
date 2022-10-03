@@ -3,10 +3,10 @@
 .heading {
     margin-bottom: 40px;
     color: white;
+    font-weight: 700;
+    font-size: 90px;
 
     &__letter {
-        font-weight: 700;
-        font-size: 90px;
         cursor: pointer;
         transition: all 0.2s linear;
         opacity: 0;
@@ -16,5 +16,12 @@
             color: $redHightlightColor;
             text-shadow: 3px 5px $cyanHightlightColor;
         }
+    }
+}
+
+@media (max-width: $tabletBreakPoint) {
+
+    .heading {
+        font-size: 56px;
     }
 }
