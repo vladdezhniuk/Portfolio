@@ -29,5 +29,10 @@
 
     .description {
         width: 100%;
+
+        &__text {
+            font-size: 20px;
+            line-height: 32px;
+        }
     }
 }

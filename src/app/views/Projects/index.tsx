@@ -45,7 +45,6 @@ export const Projects: React.FC = () => {
     const settings = {
         speed: 300,
         arrows: true,
-        autoplay: true,
         slidesToShow: 1,
         slidesToScroll: 1,
     };

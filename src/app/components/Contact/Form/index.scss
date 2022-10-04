@@ -52,6 +52,7 @@
 
     .form {
         grid-template-columns: repeat(2, calc(50% - 15px));
+        margin-top: 40px;
 
         &__submit {
             width: 100%;
