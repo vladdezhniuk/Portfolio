@@ -43,13 +43,13 @@
             position: absolute;
             z-index: 3;
             white-space: nowrap;
-            color: $cyanHightlightColor;
+            color: $redHightlightColor;
             overflow: hidden;
             transition: width 0.6s;
         }
 
         &:after {
-            color: $redHightlightColor;
+            color: $cyanHightlightColor;
             transition: width 0.3s;
             z-index: 2;
         }
@@ -64,7 +64,7 @@
     }
 
     &__link.active {
-        color: $cyanHightlightColor;
+        color: $redHightlightColor;
     }
 
     &__logo.active {
