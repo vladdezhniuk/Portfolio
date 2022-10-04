@@ -1,14 +1,18 @@
 @import "@/index.scss";
 
 .contact {
-    flex-grow: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-
     @extend %wrapper;
 
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     &__heading {
+        width: 100%;
+        margin: 80px 0 0;
+        padding-bottom: 20px;
+        text-align: left;
 
         &__letter {
             color: $cyanHightlightColor;
@@ -19,35 +23,39 @@
         }
     }
 
-    &__form-area {
-        width: 50%;
+    &__wrapper {
+        width: 100%;
+        max-width: 600px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: center;
     }
 
-    &__map {
-        margin-left: 5%;
-        width: 50%;
-        min-width: 400px;
+    &__list {
+        position: relative;
+        width: 100%;
+        padding-top: 20px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        border-top: 1px solid rgb(59 59 59);
+        animation: fade-left 0.8s 1s ease-out both;
     }
-}
 
-@media (max-width: $tabletBreakPoint) {
+    &__link {
+        margin-right: 10px;
 
-    .contact {
-        flex-direction: column;
-
-        &__form-area {
-            width: 100%;
+        svg {
+            width: 40px;
+            fill: $cyanHightlightColor;
+            transition: all 0.3s;
         }
 
-        &__map {
-            margin: 80px 0 40px;
-            width: 100%;
-            min-width: unset;
-            aspect-ratio: 1;
+        &:hover {
+
+            svg {
+                fill: $redHightlightColor;
+            }
         }
     }
 }

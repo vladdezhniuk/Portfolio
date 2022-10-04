@@ -2,7 +2,7 @@
 
 .form {
     width: 100%;
-    margin-top: 80px;
+    margin-top: 150px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 20px;
@@ -52,7 +52,6 @@
 
     .form {
         grid-template-columns: repeat(2, calc(50% - 15px));
-        margin-top: 40px;
 
         &__submit {
             width: 100%;

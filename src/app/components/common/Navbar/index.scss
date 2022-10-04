@@ -4,6 +4,7 @@
     @extend %wrapper;
 
     position: relative;
+    padding: 20px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -86,7 +87,7 @@
             left: 0;
             width: 100%;
             height: calc(100vh - 68px);
-            z-index: 2;
+            z-index: 3;
             flex-direction: column;
             justify-content: flex-start;
             padding: 0 5%;
