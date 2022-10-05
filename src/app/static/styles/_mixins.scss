@@ -10,3 +10,22 @@
         }
     }
 }
+
+/* Mixin to render overflow animation */
+@mixin overflow($ofset, $duration, $delay) {
+    position: relative;
+    animation: overflow $duration $delay ease-out both;
+
+    @keyframes overflow {
+
+        from {
+            clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
+            top: $ofset;
+        }
+
+        to {
+            top: 0;
+            clip-path: polygon(0 0, 100% 0, 100% 120%, 0 120%);
+        }
+    }
+}

@@ -67,7 +67,7 @@
             left: 0;
             right: 0;
             margin: 0 auto;
-            bottom: 40%;
+            bottom: 35%;
             padding: 35px 0;
             position: absolute;
             z-index: 3;
@@ -82,8 +82,11 @@
         }
 
         &__name {
-            font-size: 70px;
+            @include overflow(70px, 0.4s, 0.3s);
+
             margin-bottom: 40px;
+            font-size: 70px;
+            overflow: hidden;
         }
 
         &__description {
@@ -124,7 +127,6 @@
 
             &__name {
                 font-size: 50px;
-                margin-bottom: 40px;
             }
 
             &__description {
