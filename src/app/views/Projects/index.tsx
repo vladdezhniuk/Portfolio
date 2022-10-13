@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import amuzed from '@static/images/projects/amuzed.png';
 import ultimatedivision from '@static/images/projects/ultimatedivision.png';
 import minotaur from '@static/images/projects/minotaur.png';
+import ledgerMarket from '@static/images/projects/ledgerMarket.png';
 
 import './index.scss';
 
@@ -40,6 +41,12 @@ export const Projects: React.FC = () => {
             'NFT drop constructor',
             minotaur,
             'http://ec2-35-159-50-177.eu-central-1.compute.amazonaws.com:9012/'
+        ),
+        new Project(
+            'Storefront',
+            'NFT drop marketplace',
+            ledgerMarket,
+            'https://nftfss-dev.vercel.app/'
         ),
     ];
     const settings = {
