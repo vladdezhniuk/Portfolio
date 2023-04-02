@@ -5,21 +5,20 @@ import { Heading } from '../../common/Heading';
 import './index.scss';
 
 export const Description: React.FC = () =>
-    <div className="description">
-        <Heading message="About Me" className="about-heading" />
-        <p className="description__text">
-                An enthusiastic well-organized person with high attention to detail.
-        </p>
-        <br />
-        <p className="description__text">
-                I create optimized, responsive websites built using best practices.
-                Also experienced with blockchain integration.
-                My current stack is TS, JS, React, Redux, Redux-thunk, Ethers.js, Webpack, HTML5, and SCSS.
-        </p>
-        <br />
-        <p className="description__text">
-                I enjoy delivering results and always do my best to achieve the goal.
-                Ready to take on new challenges, not afraid to learn, improve and get better.
-        </p>
-    </div>;
-
+        <div className="description">
+                <Heading message="About Me" className="about-heading" />
+                <p className="description__text">
+                        Front-end developer with over 2 years of experience.
+                </p>
+                <br />
+                <p className="description__text">
+                        I create optimized, responsive websites using industry best practices.
+                        Proficient in blockchain integration and committed to staying current with the latest technologies to ensure code efficiency.
+                        My current stack is TS, JS, React.js, Redux, GraphQL, Ethers.js, Firebase, Webpack, HTML5, Styled Components and SCSS.
+                </p>
+                <br />
+                <p className="description__text">
+                        I enjoy delivering results and always do my best to achieve the goal.
+                        Eager to expand my knowledge and skills to tackle new challenges.
+                </p>
+        </div>;
