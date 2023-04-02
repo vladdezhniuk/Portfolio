@@ -3,7 +3,7 @@ import React from 'react';
 import './index.scss';
 
 export const Background: React.FC = () => {
-    const message = 'React Metamask Typescript Redux Ethers SCSS Redux-thunk ';
+    const message = 'React Next GraphQL Metamask Firebase Styled Components Typescript Redux Ethers SCSS ';
 
     return (
         <div className="home-background" >

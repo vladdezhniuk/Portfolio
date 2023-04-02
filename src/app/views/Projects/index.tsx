@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import Slider from 'react-slick';
 
+import { SliderArrow } from '@/app/components/common/SlideArrow';
+
 import amuzed from '@static/images/projects/amuzed.png';
 import ultimatedivision from '@static/images/projects/ultimatedivision.png';
 import minotaur from '@static/images/projects/minotaur.png';
@@ -13,7 +15,7 @@ class Project {
         public name: string,
         public description: string,
         public preview: string,
-        public url: string
+        public url: string,
     ) { }
 }
 
@@ -54,6 +56,8 @@ export const Projects: React.FC = () => {
         arrows: true,
         slidesToShow: 1,
         slidesToScroll: 1,
+        nextArrow: <SliderArrow />,
+        prevArrow: <SliderArrow />
     };
 
     const [isFocused, setIsFocused] = useState<boolean>(false);
