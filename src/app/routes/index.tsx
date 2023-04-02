@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { useRoutes } from 'react-router-dom';
 
 import { Home } from '@/app/views/Home';
 import { About } from '@/app/views/About';
@@ -12,23 +12,9 @@ export class ComponentRoutes {
         public children?: ComponentRoutes[]
     ) { }
 
-    /** with is method that creates child sub routes path */
-    public with(
-        child: ComponentRoutes,
-        parrent: ComponentRoutes
-    ): ComponentRoutes {
-        child.path = `${parrent.path}/${child.path}`;
-
-        return this;
-    }
-
-    /** addChildren is method that adds children components to component */
-    public addChildren(children: ComponentRoutes[]): ComponentRoutes {
-        this.children = children.map((child: ComponentRoutes) =>
-            child.with(child, this)
-        );
-
-        return this;
+    /** Adds component to children array.  */
+    public addChildren(children: ComponentRoutes[]): void {
+        this.children = children;
     }
 }
 
@@ -62,15 +48,8 @@ export class RoutesConfig {
     ];
 }
 
-export const Switch = () =>
-    <Routes>
-        {RoutesConfig.routes.map(
-            (route: ComponentRoutes, index: number) =>
-                <Route
-                    key={index}
-                    path={route.path}
-                    element={route.element}
-                    caseSensitive={false}
-                />
-        )}
-    </Routes>;
+export const Switch = () => {
+    const routes = useRoutes(RoutesConfig.routes);
+
+    return routes;
+}
