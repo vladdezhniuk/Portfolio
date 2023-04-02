@@ -32,7 +32,7 @@ export const Projects: React.FC = () => {
         new Project(
             'Ultimate Division',
             `Ultimate Division is a football simulator and card collecting game,
-            a joint project by Boosty Labs and Chickenfish games. The game is
+                a joint project by Boosty Labs and Chickenfish games. The game is
             free to play and players can build their squads to compete with each
             other in weekly competitions.`,
             ultimatedivision,
@@ -61,20 +61,24 @@ export const Projects: React.FC = () => {
     };
 
     const [isFocused, setIsFocused] = useState<boolean>(false);
+    const [projectIndex, setProjectIndex] = useState(0);
 
     return (
         <section className="projects">
-            <Slider {...settings} className="slider">
+            <div
+                className={`projects__preview ${isFocused ? "projects__preview-focused" : ''}`}
+                style={{ backgroundImage: `url(${projects[projectIndex].preview})` }}
+            />
+            <Slider
+                {...settings}
+                afterChange={index => setProjectIndex(index)}
+                className="slider"
+            >
                 {projects.map((project: Project) =>
                     <div
                         className="projects__item"
                         key={project.name}
                     >
-                        <img
-                            className={`projects__preview${isFocused ? '-focused' : ''}`}
-                            src={project.preview}
-                            alt="project preview"
-                        />
                         <div
                             className="projects__item__text-area"
                             onMouseEnter={() => setIsFocused(true)}
