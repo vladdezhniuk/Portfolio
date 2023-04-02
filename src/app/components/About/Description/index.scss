@@ -21,7 +21,7 @@
         letter-spacing: 2px;
 
         @include overflow(100%, 0.6s, 1.2s);
-        @include listAnimationDelay(3, 1.2s, 0.2s);
+        @include listAnimationDelay(3, 1.2s, 0.4s);
     }
 }
 

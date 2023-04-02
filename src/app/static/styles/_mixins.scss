@@ -4,7 +4,7 @@
 
 /* Mixin for gradual rendering of list items */
 @mixin listAnimationDelay($length, $baseDelay, $delayPerItem) {
-    @for $i from 1 through $length {
+    @for $i from 2 through $length {
         &:nth-of-type(#{$i}) {
             animation-delay: calc($baseDelay + $i * $delayPerItem);
         }
