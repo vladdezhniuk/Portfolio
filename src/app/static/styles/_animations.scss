@@ -107,3 +107,25 @@
         clip-path: polygon(85% 0, 100% 0, 100% 100%, 85% 100%);
     }
 }
+
+@keyframes rotate {
+
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes rotate-reversed {
+
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(-45deg);
+    }
+}

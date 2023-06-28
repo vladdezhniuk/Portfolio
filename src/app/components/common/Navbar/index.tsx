@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
-import burger from '@static/images/navbar/burger.svg';
-import cross from '@static/images/navbar/cross.svg';
 import { NavLinkWithDelay } from '../DelayedLink';
 
 import { RoutesConfig } from '@/app/routes';
-
 
 import './index.scss';
 
@@ -51,12 +48,11 @@ export const Navbar = () => {
                     </li>
                 )}
             </ul>
-            <img
-                src={isNavbarVisible ? cross : burger}
-                alt="navbar control"
-                className="nav__control"
-                onClick={changeNavbarVisibility}
-            />
+            <div className="nav__control" onClick={changeNavbarVisibility}>
+                {new Array(3).fill('').map((_, index) =>
+                    <div className={`nav__control__line ${isNavbarVisible && 'nav__control__line-active'}`} key={index}></div>
+                )}
+            </div>
         </nav>
     );
 };

@@ -2,7 +2,7 @@
 import { Heading } from '@/app/components/common/Heading';
 import { Form } from '@/app/components/Contact/Form';
 
-import { Github, Linkedin, Telegram } from '@/app/static/images/contact/icons';
+import { Github, Linkedin, Telegram } from '@/app/static/images/contact';
 
 import './index.scss';
 

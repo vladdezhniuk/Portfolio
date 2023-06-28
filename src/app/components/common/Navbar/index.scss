@@ -74,6 +74,50 @@
 
     &__control {
         display: none;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        overflow: hidden;
+
+        &__line {
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            left: 0;
+            background-color: white;
+            transition: all 0.3s;
+            border-radius: 2px;
+
+            &:first-child {
+                top: 0;
+            }
+
+            &:last-child {
+                bottom: 0;
+            }
+
+            &:nth-child(2) {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &-active {
+
+                &:first-child {
+                    top: 9px;
+                    animation: rotate 0.3s 0.3s both;
+                }
+
+                &:last-child {
+                    bottom: 9px;
+                    animation: rotate-reversed 0.3s 0.3s both;
+                }
+
+                &:nth-child(2) {
+                    height: 0;
+                }
+            }
+        }
     }
 }
 
@@ -113,8 +157,7 @@
         }
 
         &__control {
-            width: 21px;
-            display: block;
+            display: inline-block;
         }
     }
 }
