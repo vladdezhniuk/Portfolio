@@ -2,7 +2,7 @@ import { useContext } from 'react';
 
 import { Navbar } from '@components/common/Navbar';
 import { LoaderContext } from './context/loader';
-import { Loader } from './components/common/Loader';
+import { RouteLoader } from './components/common/RouteLoader';
 import { Switch } from './routes';
 
 import './App.scss';
@@ -14,7 +14,7 @@ function App() {
         <>
             <Navbar />
             <main className="main">
-                {isLoading && <Loader />}
+                {isLoading && <RouteLoader />}
                 <Switch />
             </main>
         </>

@@ -5,7 +5,7 @@ import './index.scss';
 export const Heading: React.FC<{ message: string; className?: string }> = ({ message, className = '' }) =>
     <h1 className={`heading ${className}`}>
         {message.split('').map((letter: string, index: number) =>
-            <>
+            <React.Fragment key={index}>
                 <span
                     className={`heading__letter ${className && `${className}__letter`}`}
                     key={letter}
@@ -15,7 +15,7 @@ export const Heading: React.FC<{ message: string; className?: string }> = ({ mes
                     {letter}
                 </span>
                 {letter === ',' && <br />}
-            </>
+            </React.Fragment>
         )}
     </h1>;
 

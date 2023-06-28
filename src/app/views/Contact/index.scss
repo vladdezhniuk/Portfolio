@@ -59,3 +59,13 @@
         }
     }
 }
+
+@media (max-width: $tabletBreakPoint) {
+
+    .contact {
+
+        &__wrapper {
+            flex-grow: 1;
+        }
+    }
+}

@@ -1,45 +1,22 @@
-@import "@/index.scss";
-
 .loader {
-    position: absolute;
-    left: 0;
-    top: -18px;
-    width: 100vw;
-    height: calc(100vh - 50px);
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $mainBackgroundColor;
-    z-index: 5;
-    animation: loader-translate 2s linear both;
 
-    &__heading {
-        position: relative;
-        text-transform: uppercase;
-        font-size: 40px;
-        letter-spacing: 8px;
-        color: transparent;
-        text-align: center;
+    svg {
+        animation: loading 1.2s linear both infinite;
+    }
+}
 
-        &:after,
-        &:before {
-            content: "loading";
-            position: absolute;
-            left: 0;
-            top: 0;
-            padding: 10px 2px 10px 10px;
-            filter: blur(5px);
-            color: white;
-            text-align: center;
-        }
+@keyframes loading {
 
-        &:after {
-            border-top: 2px solid $redHightlightColor;
-            border-bottom: 2px solid $redHightlightColor;
-            filter: none;
-            background-color: $mainBackgroundColor;
-            animation: loading-letters 1.2s 0.5s alternate infinite both;
-            z-index: 5;
-        }
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
     }
 }

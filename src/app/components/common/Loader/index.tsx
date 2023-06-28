@@ -1,10 +1,15 @@
 import React from 'react';
+import { Spinner } from '@static/images/common';
+
 import './index.scss';
 
-export const Loader = () =>
-    <section className="loader">
-        <div className="loader__wrapper">
-            <h3 className="loader__heading">loading</h3>
-        </div>
-    </section>;
+export const Loader: React.FC<{
+    spinnerSize: string;
+    containerHeight?: string;
+}> = ({ spinnerSize, containerHeight = 'unset' }) =>
+        <div className="loader" style={{ height: containerHeight }}>
+            <div className="loader__spinner" style={{ height: spinnerSize, width: spinnerSize }}>
+                <Spinner />
+            </div>
+        </div>;
 

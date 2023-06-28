@@ -18,8 +18,14 @@
         outline: none;
         background-color: rgb(59 59 59);
         font-size: 16px;
+        line-height: 20px;
         color: #6a7472;
         animation: fade-right 0.4s ease-out both;
+        transition: all 0.3s;
+
+        &:focus {
+            background-color: #462d32;
+        }
     }
 
     &__name {
@@ -34,23 +40,41 @@
 
     &__message {
         grid-column: 1/3;
+        resize: none;
+        cursor: auto;
         animation-delay: 1.6s;
     }
 
     &__submit {
-        @extend %contactButton ;
+        @extend %contactButton;
 
         position: relative;
         grid-column: 2/2;
         justify-self: flex-end;
         animation: fade-up 0.4s 1.7s ease-out both;
         cursor: pointer;
+
+        .fg {
+            fill: $redHightlightColor;
+            transition: all 0.3s;
+            position: relative;
+            z-index: 100;
+        }
+
+        &:hover,
+        &:focus {
+
+            .fg {
+                fill: $mainBackgroundColor;
+            }
+        }
     }
 }
 
 @media (max-width: $tabletBreakPoint) {
 
     .form {
+        margin-top: 50px;
         grid-template-columns: repeat(2, calc(50% - 15px));
 
         &__submit {

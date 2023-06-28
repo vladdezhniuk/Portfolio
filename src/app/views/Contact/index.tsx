@@ -25,7 +25,7 @@ export const Contact = () => {
             <Heading message="Contact me" className="contact__heading" />
             <ul className="contact__list">
                 {socialLinks.map((link: SocialLink) =>
-                    <li className="contact__item">
+                    <li className="contact__item" key={link.url}>
                         <a
                             className="contact__link"
                             href={link.url}

@@ -1,36 +1,44 @@
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useMemo, useState } from 'react';
 
+import { Loader } from '../../common/Loader';
+
+import { FormClient } from '@/api/form';
 
 import './index.scss';
 
 export const Form = () => {
-    const FORM_ENDPOINT = 'https://public.herotofu.com/v1/20b89e10-426a-11ed-9b17-6fdf7f94f506';
+    const client = useMemo(() => new FormClient(), []);
     const [name, setName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const [message, setMessage] = useState<string>('');
+    const [isSuccess, setIsSuccess] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
-    const handleSubmit = async(event: FormEvent<HTMLFormElement>) => {
+    const editName = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setIsSuccess(false);
+        setName(event.target.value);
+    };
+    const editEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setIsSuccess(false);
+        setEmail(event.target.value);
+    };
+    const editMessage = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+        setIsSuccess(false);
+        setMessage(event.target.value);
+    };
+
+    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        try {
-            await fetch(FORM_ENDPOINT, {
-                method: 'POST',
-                headers: {
-                    Accept: 'application/json',
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    name,
-                    email,
-                    message,
-                }),
-            });
-        } catch (error) { }
+        setIsLoading(true);
+        client.contactMe(name, email, message).finally(() => {
+            setIsLoading(false);
+            setIsSuccess(true);
+        });
     };
 
     return (
         <form
             className="form"
-            action={FORM_ENDPOINT}
             method="post"
             onSubmit={handleSubmit}
         >
@@ -39,28 +47,35 @@ export const Form = () => {
                 placeholder="Name"
                 className="form__name"
                 id="name"
-                onChange={e => setName(e.target.value)}
+                onChange={editName}
             />
             <input
                 type="email"
                 placeholder="Enter email"
                 className="form__email"
                 id="email"
-                onChange={e => setEmail(e.target.value)}
+                onChange={editEmail}
             />
-            <input
-                type="text"
+            <textarea
                 id="message"
                 placeholder="Message"
                 className="form__message"
-                onChange={e => setMessage(e.target.value)}
+                rows={5}
+                onChange={editMessage}
             />
             <button
                 type="submit"
                 className="form__submit"
-                datatype="Hit me up"
+                tabIndex={0}
+                datatype={isLoading ? '' : isSuccess ? 'Thank You!' : 'Hit me up'}
             >
-                Hit me up
+                {
+                    isLoading
+                        ?
+                        <Loader spinnerSize='24px' />
+                        :
+                        null
+                }
             </button>
         </form>
     );
