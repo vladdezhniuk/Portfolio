@@ -8,6 +8,10 @@
     width: 100%;
     max-width: 1920px;
     padding: 0 5%;
+
+    @media (max-width: $phoneBreakPoint) {
+        padding: 0 3%;
+    }
 }
 
 %contactButton {
@@ -38,7 +42,7 @@
         align-items: center;
         z-index: 2;
         white-space: nowrap;
-        transition: color 0.2s  ease-out;
+        transition: color 0.2s ease-out;
     }
 
     &:after {
@@ -63,5 +67,11 @@
             width: 130%;
             clip-path: polygon(0 0, 120% 0%, 100% 100%, 0% 100%);
         }
+    }
+
+    @media (max-width: $phoneBreakPoint) {
+        width: 150px;
+        height: 40px;
+        font-size: 16px;
     }
 }

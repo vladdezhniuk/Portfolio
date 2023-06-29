@@ -16,3 +16,14 @@
         animation: fade-right 0.3s 3.5s ease-out both;
     }
 }
+
+@media (max-width: $phoneBreakPoint) {
+
+    .home {
+
+        &__contact-me {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+    }
+}

@@ -82,3 +82,18 @@
         }
     }
 }
+
+@media (max-width: $phoneBreakPoint) {
+
+    .form {
+        column-gap: 15px;
+        row-gap: 10px;
+
+        &__name,
+        &__email,
+        &__message {
+            font-size: 14px;
+            padding: 6px 10px;
+        }
+    }
+}

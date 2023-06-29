@@ -69,3 +69,17 @@
         }
     }
 }
+
+@media (max-width: $phoneBreakPoint) {
+
+    .contact {
+
+        &__link {
+
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
