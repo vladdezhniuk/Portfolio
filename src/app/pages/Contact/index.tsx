@@ -2,7 +2,7 @@
 import { Heading } from '@/app/components/common/Heading';
 import { Form } from '@/app/components/Contact/Form';
 
-import { Github, Linkedin, Telegram } from '@/app/static/images/contact';
+import { Github, Instagram, Linkedin, Telegram } from '@/app/static/images/contact';
 
 import './index.scss';
 
@@ -18,6 +18,7 @@ export const Contact = () => {
         new SocialLink('https://github.com/vladdezhniuk', <Github />),
         new SocialLink('https://www.linkedin.com/in/vladdezhniuk/', <Linkedin />),
         new SocialLink('https://t.me/vladdezhniuk', <Telegram />),
+        new SocialLink('https://www.instagram.com/vladdezhniuk/', <Instagram />),
     ];
 
     return (
