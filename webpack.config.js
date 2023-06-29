@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const StylelintPlugin = require("stylelint-webpack-plugin");
 const zlib = require("zlib");
 const CompressionPlugin = require("compression-webpack-plugin");
+const Dotenv = require('dotenv-webpack');
 
 const PRODUCTION_PLUGINS = [
     new HtmlWebpackPlugin({
@@ -30,6 +31,7 @@ const PRODUCTION_PLUGINS = [
         minRatio: 0.8,
         deleteOriginalAssets: false,
     }),
+    new Dotenv({ path: "./.env" }),
 ];
 
 const DEVELOPMENT_PLUGINS = [
@@ -38,7 +40,8 @@ const DEVELOPMENT_PLUGINS = [
         template: "./public/index.html",
         favicon: "./src/app/static/images/favicon.ico"
     }),
-    new StylelintPlugin({ fix: true })
+    new StylelintPlugin({ fix: true }),
+    new Dotenv({ path: "./.env" }),
 ];
 
 const OPTIMISATION = {
