@@ -1,9 +1,9 @@
 import { useRoutes } from 'react-router-dom';
 
-import { Home } from '@/app/views/Home';
-import { About } from '@/app/views/About';
-import { Projects } from '@/app/views/Projects';
-import { Contact } from '@/app/views/Contact';
+import { Home } from '@/app/pages/Home';
+import { About } from '@/app/pages/About';
+import { Projects } from '@/app/pages/Projects';
+import { Contact } from '@/app/pages/Contact';
 
 export class ComponentRoutes {
     constructor(
