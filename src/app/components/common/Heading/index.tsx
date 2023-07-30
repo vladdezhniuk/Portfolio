@@ -2,20 +2,30 @@ import React from 'react';
 
 import './index.scss';
 
-export const Heading: React.FC<{ message: string; className?: string }> = ({ message, className = '' }) =>
-    <h1 className={`heading ${className}`}>
-        {message.split('').map((letter: string, index: number) =>
-            <React.Fragment key={index}>
-                <span
-                    className={`heading__letter ${className && `${className}__letter`}`}
-                    key={letter}
-                    datatype={letter}
-                    style={{ animationDelay: `${0.4 + 0.1 * index}s` }}
-                >
-                    {letter}
-                </span>
-                {letter === ',' && <br />}
-            </React.Fragment>
-        )}
-    </h1>;
+export const Heading: React.FC<{
+    message: string;
+    separator?: string;
+    className?: string;
+    delayPerElement?: number;
+}> = ({
+    message,
+    separator = ',',
+    className = '',
+    delayPerElement = 0.1
+}) =>
+        <h1 className={`heading ${className}`}>
+            {message.split(separator).map((letter: string, index: number) =>
+                <React.Fragment key={index}>
+                    <span
+                        className={`heading__element ${className && `${className}__letter`}`}
+                        key={letter}
+                        datatype={letter}
+                        style={{ animationDelay: `${0.4 + delayPerElement * index}s` }}
+                    >
+                        {letter}
+                    </span>
+                    {letter.includes(',') && <br />}
+                </React.Fragment>
+            )}
+        </h1>;
 

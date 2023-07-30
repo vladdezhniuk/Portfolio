@@ -129,3 +129,14 @@
         transform: rotate(-45deg);
     }
 }
+
+@keyframes expand {
+
+    from {
+        clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+    }
+
+    to {
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+    }
+}

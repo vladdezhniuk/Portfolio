@@ -14,7 +14,7 @@ export const Description: React.FC = () =>
                 <p className="description__text">
                         I create optimized, responsive websites using industry best practices.
                         Proficient in blockchain integration and committed to staying current with the latest technologies to ensure code efficiency.
-                        My current stack is TS, JS, React.js, Redux, GraphQL, Ethers.js, Firebase, Webpack, HTML5, Styled Components and SCSS.
+                        My current stack is TS, JS, React.js, Redux, GraphQL, Ethers.js, Firebase, Vite, Webpack, HTML5, Styled Components and SCSS.
                 </p>
                 <br />
                 <p className="description__text">

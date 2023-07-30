@@ -12,11 +12,11 @@
         background-size: cover;
         background-position: center;
         transition: all 0.5s;
-        filter: blur(10px);
+        filter: blur(10px) saturate(0);
     }
 
     &__preview-focused {
-        filter: blur(0);
+        filter: blur(0) saturate(1);
     }
 
     .slider {

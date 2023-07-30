@@ -3,6 +3,7 @@
 .map {
     box-sizing: border-box;
     width: 50%;
+    animation: expand 1s 1s linear both;
 
     &__container {
         width: 100%;

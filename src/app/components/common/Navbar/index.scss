@@ -12,6 +12,10 @@
 
     &__logo {
         animation: fade 0.3s linear both;
+
+        &:after {
+            display: none;
+        }
     }
 
     &__list,
@@ -33,31 +37,23 @@
         position: relative;
         font-size: 24px;
         line-height: 28px;
-        transition: color 0.3s ease-out;
+        transition: color 0.2s ease-out;
 
-        &:before,
         &:after {
-            content: attr(datatype);
-            left: 0;
-            top: 0;
-            width: 0;
+            content: "";
             position: absolute;
-            z-index: 3;
-            white-space: nowrap;
-            color: $redHightlightColor;
-            overflow: hidden;
-            transition: width 0.6s;
-        }
-
-        &:after {
-            color: $cyanHightlightColor;
-            transition: width 0.3s;
-            z-index: 2;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            border-radius: 2px;
+            background-color: white;
+            transition: width 0.3s ease-in;
         }
 
         &:hover {
+            color: rgb(180 180 180);
 
-            &:before,
             &:after {
                 width: 100%;
             }
@@ -65,11 +61,17 @@
     }
 
     &__link.active {
+        cursor: not-allowed;
         color: $redHightlightColor;
     }
 
     &__logo.active {
         color: white;
+        cursor: none;
+
+        &:after {
+            display: none;
+        }
     }
 
     &__control {

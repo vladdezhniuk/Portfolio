@@ -25,7 +25,7 @@ export const Map = () => {
                     zoom={zoom}
                     center={position}
                     mapContainerClassName='map__container'
-                    options={{ mapId: '2889f91c543c823d' }}
+                    options={{ mapId: '2889f91c543c823d', disableDefaultUI: true }}
                 >
                     <Marker position={position} />
                 </GoogleMap>
