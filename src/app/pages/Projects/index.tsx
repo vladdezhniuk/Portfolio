@@ -88,7 +88,7 @@ export const Projects: React.FC = () => {
             />
             <Slider
                 {...settings}
-                afterChange={index => setProjectIndex(index)}
+                afterChange={(index: number) => setProjectIndex(index)}
                 className="slider"
             >
                 {projects.map((project: Project) =>

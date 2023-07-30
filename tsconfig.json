@@ -1,6 +1,23 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "esnext",
+    "baseUrl": ".",
+    "paths": {
+      "@static/*": [
+        "./src/app/static/*"
+      ],
+      "@components/*": [
+        "./src/app/components/*"
+      ],
+      "@/*": [
+        "./src/*"
+      ],
+      "lib": [
+        "dom",
+        "dom.iterable",
+        "esnext"
+      ],
+    },
     "lib": [
       "dom",
       "dom.iterable",
@@ -17,25 +34,11 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": false,
-    "jsx": "react-jsx",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@components/*": [
-        "./src/app/components/*"
-      ],
-      "@static/*": [
-        "./src/app/static/*"
-      ]
-    },
+    "noEmit": true,
+    "jsx": "react-jsx"
   },
   "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules"
+    "src",
+    "vite.config.ts",
   ]
 }
