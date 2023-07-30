@@ -155,9 +155,12 @@
     }
 }
 
-@media (max-width: $tabletBreakPoint) {
+@media (max-width: $desktopBreakPoint) {
 
     .projects {
+        &__preview {
+            filter: blur(0) saturate(1);
+        }
 
         &__item {
 
