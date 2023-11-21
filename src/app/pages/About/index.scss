@@ -2,19 +2,38 @@
 
 .about {
     @extend %wrapper;
-
-    flex-grow: 1;
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-grow: 1;
     gap: 10%;
+
+    &__wrapper {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        animation: map-loading 0.7s 1.3s linear both;
+    }
 }
 
 @media (max-width: $tabletBreakPoint) {
-
     .about {
         padding: 40px 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
         row-gap: 100px;
+        &__wrapper {
+            position: relative;
+            height: unset;
+            width: 100%;
+            justify-content: center;
+        }
     }
 }
+
+

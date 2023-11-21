@@ -7,7 +7,9 @@ export const About: React.FC = () => {
     return (
         <section className="about">
             <Description />
-            <Map />
+            <div className="about__wrapper">
+                <Map />
+            </div>
         </section>
     );
 };

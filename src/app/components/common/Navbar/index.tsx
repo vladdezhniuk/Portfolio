@@ -26,32 +26,34 @@ export const Navbar = () => {
 
     return (
         <nav className="nav">
-            <NavLinkWithDelay
-                className="nav__link nav__logo"
-                to={RoutesConfig.Home.path}
-                datatype="vladdezhniuk"
-                setIsNavbarVisible={setIsNavbarVisible}
-            >
-                vladdezhniuk
-            </NavLinkWithDelay>
-            <ul className={`nav__list${isNavbarVisible ? '-active' : ''}`}>
-                {navLinks.map((link: NavigationLink) =>
-                    <li className="nav__item" key={link.label} >
-                        <NavLinkWithDelay
-                            to={link.url}
-                            className="nav__link"
-                            datatype={link.label}
-                            setIsNavbarVisible={setIsNavbarVisible}
-                        >
-                            {link.label}
-                        </NavLinkWithDelay>
-                    </li>
-                )}
-            </ul>
-            <div className="nav__control" onClick={changeNavbarVisibility}>
-                {new Array(3).fill('').map((_, index) =>
-                    <div className={`nav__control__line ${isNavbarVisible && 'nav__control__line-active'}`} key={index}></div>
-                )}
+            <div className='nav__wrapper'>
+                <NavLinkWithDelay
+                    className="nav__link nav__logo"
+                    to={RoutesConfig.Home.path}
+                    datatype="vladdezhniuk"
+                    setIsNavbarVisible={setIsNavbarVisible}
+                >
+                    vladdezhniuk
+                </NavLinkWithDelay>
+                <ul className={`nav__list${isNavbarVisible ? '-active' : ''}`}>
+                    {navLinks.map((link: NavigationLink) =>
+                        <li className="nav__item" key={link.label} >
+                            <NavLinkWithDelay
+                                to={link.url}
+                                className="nav__link"
+                                datatype={link.label}
+                                setIsNavbarVisible={setIsNavbarVisible}
+                            >
+                                {link.label}
+                            </NavLinkWithDelay>
+                        </li>
+                    )}
+                </ul>
+                <div className="nav__control" onClick={changeNavbarVisibility}>
+                    {new Array(3).fill('').map((_, index) =>
+                        <div className={`nav__control__line ${isNavbarVisible && 'nav__control__line-active'}`} key={index}></div>
+                    )}
+                </div>
             </div>
         </nav>
     );

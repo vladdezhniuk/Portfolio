@@ -1,15 +1,17 @@
 @import "@/index.scss";
 
 .nav {
-    @extend %wrapper;
-
     position: relative;
-    padding: 20px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     z-index: 2;
+    background-color: $mainBackgroundColor;
 
+    &__wrapper {
+        @extend %wrapper;
+        padding: 20px 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     &__logo {
         animation: fade 0.3s linear both;
 
@@ -140,6 +142,7 @@
             padding: 0 5%;
             overflow: hidden;
             background-color: $mainBackgroundColor;
+            z-index: 10;
         }
 
         &__list {

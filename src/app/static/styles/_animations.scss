@@ -140,3 +140,13 @@
         clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
     }
 }
+
+@keyframes map-loading {
+    from{
+        transform: scale(1)
+    };
+    to {
+        transform: scale(1.4) translateX(-6.7%);
+
+    }
+}

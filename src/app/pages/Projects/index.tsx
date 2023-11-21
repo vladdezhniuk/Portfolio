@@ -34,8 +34,8 @@ export const Projects: React.FC = () => {
             'https://www.kaminari.cloud'
         ),
         new Project(
-            'Storefront',
-            'NFT drop marketplace',
+            'Ledger Market',
+            'Platform for curated NFT drops that enables artists and brands to create, distribute, and store NFTs with ease and world-class security. Through curation, artist-in-residence programs, custom collaborations, and product drops, [ Ledger ] Market gives you true ownership and control at every stage of the NFT experience, from minting to safeguarding. ',
             ledgerMarket,
             'https://market.ledger.com'
         ),
