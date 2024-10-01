@@ -8,13 +8,14 @@ export const Description: React.FC = () =>
         <div className="description">
                 <Heading message="About Me" className="about-heading" />
                 <p className="description__text">
-                        Front-end developer with over 2 years of experience.
+                        Front-end developer with over 3 years of experience.
                 </p>
                 <br />
                 <p className="description__text">
-                        I create optimized, responsive websites using industry best practices.
-                        Proficient in blockchain integration and committed to staying current with the latest technologies to ensure code efficiency.
-                        My current stack is TS, JS, React.js, Redux, GraphQL, Ethers.js, Firebase, Vite, Webpack, HTML5, Styled Components and SCSS.
+                        I create optimized, responsive, and scalable websites using industry best practices.
+                        Proficient in blockchain development, including work on wallet applications, launchpad platforms, NFT platforms, and decentralized storage apps.
+                        Strong collaborator with remote teams and experienced in mentoring developers and contributing to project estimations.
+                        My current stack is TS, JS, React.js, Next.js, Redux, Wagmi, Viem, Ethers.js, Firebase, Vite, Webpack, HTML5, Styled Components and SCSS.
                 </p>
                 <br />
                 <p className="description__text">
