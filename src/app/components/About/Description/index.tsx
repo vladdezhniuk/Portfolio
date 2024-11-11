@@ -8,7 +8,7 @@ export const Description: React.FC = () =>
         <div className="description">
                 <Heading message="About Me" className="about-heading" />
                 <p className="description__text">
-                        Front-end developer with over 3 years of experience.
+                        Front-end developer with over 4 years of experience.
                 </p>
                 <br />
                 <p className="description__text">
